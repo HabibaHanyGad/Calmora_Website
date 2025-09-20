@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calmora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="imgs/Calmora.png" type="image/png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Riot&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/Test.css">
+  <link rel="stylesheet" href="css/btn-animations.css">
+  <style>
+    #close {
+      background-color: white;
+      padding: 0px 5px;
+      width: fit-content;
+    }
+
+    #close:hover {
+      scale: 1.1;
+    }
+
+    #contact {
+      border-radius: 60px;
+      font-size: 1px;
+      padding: 0%;
+      border: 2px solid #000000;
+      background-color: rgb(255, 255, 255);
+    }
+
+    #contact:hover {
+      background-color: rgb(240, 234, 225);
+    }
+
+    #contact a:hover {
+      text-decoration: none;
+    }
+
+    #contact a {
+      width: 10;
+      border-radius: 60px;
+      padding: 0px;
+      font-size: 18px;
+      color: #000000;
+
+    }
+        @media (max-width: 768px) {
+    #contact  a {
+    text-decoration: none;
+    border: none;
+    font-size: 15px;
+    }
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ------------------------------- navbar ------------------------------- -->
+  <nav class="navbar navbar-expand-lg bg-dark sticky-top color1">
+    <img src="imgs/Calmora.png" alt="LOGO" class="logo">
+    <span class="Calmora">
+      <h2>Calmora</h2>
+    </span>
+    <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-2">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="Test.html">Mental Test</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Categories</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="services.html">Services</a></li>
+            <li><a class="dropdown-item" href="index.html#Therapist">Therapist</a></li>
+            <li><a class="dropdown-item" href="Stories.html">Stories</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#contact-us">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 ms-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-dark me-3" type="button">Search</button>
+        <span id="username-display" class="text-white me-3 fw-bold" style="padding: 0%; margin: -10px;"></span>
+        <button id="show-login" class="btn btn-outline-dark me-2" type="button">Login</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Login Modal -->
+  <div class="login-modal">
+    <div class="container-modal" id="container">
+      <button id="close">X</button>
+      <div class="form-container-modal sign-up">
+        <form id="signup-form">
+          <h1 class="fs-2">Create Account</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email & password</span>
+          <input type="text" placeholder="Name" id="signup-name" required />
+          <input type="email" placeholder="Email" id="signup-email" required />
+          <input type="password" placeholder="Password" id="signup-password" required />
+          <a href="#" id="pass">Forget Your Password?</a>
+          <div class="text-box">
+            <button type="submit" id="signup-btn" class="btn-animation btn-animation-white btn-animation-animate">
+              Create_Account
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="form-container-modal sign-in">
+        <form id="signin-form">
+          <h1>Sign In</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email & password</span>
+          <input type="email" placeholder="Email" id="signup-email" required />
+          <input type="password" placeholder="Password" id="signup-password" required />
+          <a href="#" id="pass">Forget Your Password?</a>
+          <div class="text-box">
+          <button type="submit" id="signin-btn" class="btn-animation btn-animation-white btn-animation-animate">Sign_In</button>
+          </div>
+        </form>
+      </div>
+      <div class="toggle-container-modal">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Welcome Back!</h1>
+            <p>Enter your personal details to use all of site features</p>
+            <button class="hidden modal-button" id="login">Sign In</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Hello</h1>
+            <p>Register with your personal details to use all of site features</p>
+            <button class="hidden modal-button" id="register">Create Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="language-switcher">
+    <a href="Test-arabic.html" class="language-btn">العربيه</a>
+  </div>
+  <!-- ------------------------------- quiz-container------------------------------- -->
+
+  <div class="quiz-container">
+    <h2>"Discover Your Mental Health"</h2>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <form id="quizForm">
+      <div class="question" id="question">Loading...</div>
+      <div class="answers" id="answers"></div>
+      <button type="button" class="Next" onclick="nextQuestion()">Next</button>
+    </form>
+    <div class="results" id="results"></div>
+  </div>
+
+
+  <!-- ------------------------------- Contact US ------------------------------- -->
+  <div class="card mb-3" id="contact-us">
+    <div class="card-body2 color1" style="height: 80px;">
+      <h5 class="card-title position-absolute top-50 start-50 translate-middle">Contact Us</h5>
+    </div>
+  </div>
+
+  <div class="cu-item">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Phone Number:</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="+20123456789">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Details:</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: none;"></textarea>
+    </div>
+    <button type="button" class="btn btn-outline-dark" id="alert" data-bs-container="body" data-bs-toggle="popover"
+      data-bs-placement="right" data-bs-content="SENT" data-bs-trigger="focus">
+      SEND
+    </button>
+  </div>
+  <!-- ------------------------------- Footer ------------------------------- -->
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="logos">
+        <img src="imgs/Calmora.png" alt="Logo 1" class="logo3">
+      </div>
+      <div class="contact-info">
+        <p id="Hint">Mental health is just as important as physical health.<br> Take time for yourself, speak up,
+          seek professional help when needed, and always be kind to yourself.</p>
+        <p id="Hint">"we are here for you,Online 24 Hours"</p>
+        <p></p>
+      </div>
+      <hr>
+      <div class="social-icons">
+        <a href="#" target="_blank" aria-label="Facebook">
+          <img src="imgs/facebook.png" alt="Facebook" class="icons">
+        </a>
+        <a href="#" target="_blank" aria-label="YouTube">
+          <img src="imgs/youtube.png" alt="YouTube" class="icons">
+        </a>
+        <a href="#" target="_blank" aria-label="LinkedIn">
+          <img src="imgs/linkedin.png" alt="LinkedIn" class="icons">
+        </a>
+        <a href="#" target="_blank" aria-label="WhatsApp">
+          <img src="imgs/whatsapp.png" alt="WhatsApp" class="icons">
+        </a>
+        <p><button id="contact"><a href="#contact-us">Contact Us</a></button> </p>
+      </div>
+    </div>
+
+
+    <ol class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="index.html#Therapist">Therapist</a></li>
+      <li><a href="Test.html">Test</a></li>
+      <li><a href="Stories.html">Stories</a></li>
+    </ol>
+
+
+    <div class="footer-bottom">
+      <hr>
+      <p class="bottom">Copyright © 2025 General Secretariat for Mental Health and Addiction Treatment</p>
+      <p class="bottom">Developed by <span>DMS</span> - Version 2025</p>
+    </div>
+  </footer>
+
+
+  <!-- ---------------------------------------------------------------------------- -->
+
+  <script src="./js/main.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/Test.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

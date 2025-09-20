@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calmora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="imgs/Calmora.png" type="image/png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Riot&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/Stories.css">
+  <link rel="stylesheet" href="css/btn-animations.css">
+</head>
+
+<body>
+  <!-- ------------------------------- navbar ------------------------------- -->
+  <nav class="navbar navbar-expand-lg bg-dark sticky-top color1">
+    <img src="imgs/Calmora.png" alt="LOGO" class="logo">
+    <span class="Calmora">
+      <h2>Calmora</h2>
+    </span>
+    <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-2">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="Test.html">Mental Test</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Categories</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="services.html">Services</a></li>
+            <li><a class="dropdown-item" href="index.html#Therapist">Therapist</a></li>
+            <li><a class="dropdown-item" href="Stories.html">Stories</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="index.html#contact-us">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 ms-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-dark me-3" type="button">Search</button>
+        <span id="username-display" class="text-white me-3 fw-bold" style="padding: 0%; margin: -10px;"></span>
+        <button id="show-login" class="btn btn-outline-dark me-2" type="button">Login</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Login Modal -->
+  <div class="login-modal">
+    <div class="container-modal" id="container">
+      <button id="close">X</button>
+      <div class="form-container-modal sign-up">
+        <form id="signup-form">
+          <h1 class="fs-2">Create Account</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email & password</span>
+          <input type="text" placeholder="Name" id="signup-name" required />
+          <input type="email" placeholder="Email" id="signup-email" required />
+          <input type="password" placeholder="Password" id="signup-password" required />
+          <a href="#" id="pass">Forget Your Password?</a>
+          <div class="text-box">
+             <button type="submit" id="signup-btn" class="btn-animation btn-animation-white btn-animation-animate">
+              Create_Account
+            </button>
+          </div>
+
+        </form>
+      </div>
+      <div class="form-container-modal sign-in">
+        <form id="signin-form">
+          <h1>Sign In</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email & password</span>
+          <input type="email" placeholder="Email" id="signup-email" required />
+          <input type="password" placeholder="Password" id="signup-password" required />
+          <a href="#" id="pass">Forget Your Password?</a>
+          <div class="text-box">
+           <button type="submit" id="signin-btn" class="btn-animation btn-animation-white btn-animation-animate">Sign_In</button>
+          </div>
+        </form>
+      </div>
+      <div class="toggle-container-modal">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Welcome Back!</h1>
+            <p>Enter your personal details to use all of site features</p>
+            <button class="hidden modal-button" id="login">Sign In</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Hello</h1>
+            <p>Register with your personal details to use all of site features</p>
+            <button class="hidden modal-button" id="register">Create Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="language-switcher">
+    <a href="stories-arabic.html" class="language-btn">العربيه</a>
+  </div>
+
+
+
+  <p class="title1">
+    These are some of the challenges that people have faced and successfully overcome with the help of our website.
+    <br>
+    <span>Share your experience with us!</span>
+  </p>
+  <section class="section" id="mental-health">
+    <div class="content-grid">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="imgs/boy.jpg" alt="Story 1">
+        <div class="card-content">
+          <h3 id="card1-title">" Ahmed: The Journey Out of Deep Depression"</h3>
+          <p id="card1-text">
+            Ahmed was an ambitious young man, working hard to achieve his dreams, but he started feeling a loss of
+            motivation and extreme frustration.
+            <span class="more-text">
+              This feeling lasted for months, leading him to isolate himself from his friends and family. He didn’t know
+              why, but he lost interest in everything around him.
+              One day, he decided to seek help and visited our website Calmora and feel that there is a hope again. He
+              was diagnosed with clinical depression and
+              started cognitive behavioral therapy. Alongside therapy,
+              he engaged in exercise and journaling to express his emotions. After months of commitment to treatment and
+              support from his family, Ahmed began to improve.
+              Today, he is more aware of his mental health and helps others facing similar struggles.
+            </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+      </div>
+
+      <!-- Cards 2 -->
+      <div class="card">
+        <img src="imgs/girl.png" alt="Story 2">
+        <div class="card-content">
+          <h3 id="card2-title">"Sara: Overcoming Social Anxiety and Isolation"</h3>
+          <p id="card2-text">Since childhood, Sara had been extremely shy and felt anxious when talking to others. As
+            she grew older, the problem worsened, and </p>
+          <span class="more-text">
+            she became terrified of social interactions, avoiding situations that required communication. Attending
+            university was a nightmare for her—she suffered from panic attacks before
+            every lecture or group meeting. With encouragement from a friend, she visited our website Calmora and
+            discovered she
+            had social anxiety disorder. She started behavioral therapy,
+            taking small steps to overcome her fears, like initiating short conversations with strangers and practicing
+            speaking in front of a mirror.
+            Today, Sara is much more confident and lives her life without the fear of judgment.
+          </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+      </div>
+      <!-- Cards 3 -->
+
+      <div class="card">
+        <img src="imgs/girl.png" alt="Story 3">
+        <div class="card-content">
+          <h3 id="card3-title">"Laila: Surviving PTSD (Post-Traumatic Stress Disorder)"</h3>
+          <p id="card3-text">Laila was in a horrific car accident that nearly took her life. Although she physically
+            recovered, her mind remained trapped in the trauma.</p>
+          <span class="more-text">
+            She suffered from recurring nightmares and intense fear whenever she heard brakes screeching or saw speeding
+            cars.
+            She didn’t understand what was happening to her until a doctor suggested seeing a psychologist and to see
+            our website Calmora because it's professional. She was
+            diagnosed with PTSD and began therapy that involved relaxation techniques and talk therapy.
+            Over time, she regained control of her life and became more aware of how to manage psychological trauma.
+          </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+      </div>
+      <!-- Cards 4 -->
+
+      <div class="card">
+        <img src="imgs/boy.jpg" alt="Story 4">
+        <div class="card-content">
+          <h3 id="card4-title">"Yassin: From Severe Depression to Achieving His Dreams"</h3>
+          <p id="card4-text">Yassin was a top student, but he experienced extreme psychological pressure due to his
+            university studies and the high expectations of his family.</p>
+          <span class="more-text">
+            He started feeling exhausted, lost his passion for life, and no longer found joy in anything. Over time, his
+            condition worsened into severe depression,
+            leading him to completely isolate himself from friends and family. After several attempts to hide his
+            struggles, he finally opened up to one of his professors,
+            who advised him to visit our website Calmora. Yassin began therapy, engaged in physical activities, and
+            started
+            creative expression through writing and drawing.
+            Today, not only has he recovered, but he also helps other students struggling with academic pressure.
+          </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+      </div>
+      <!-- Cards 5 -->
+
+      <div class="card">
+        <img src="imgs/girl.png" alt="Story 5">
+        <div class="card-content">
+          <h3 id="card5-title">"Reem: Overcoming Obsessive-Compulsive Disorder (OCD)"</h3>
+          <p id="card5-text">Reem had always been organized, but she didn’t realize that her obsession with cleanliness
+            and order was actually a mental health disorder. </p>
+          <span class="more-text">
+            She spent hours washing her hands and had obsessive thoughts that made daily life difficult. She couldn’t
+            leave her house without checking everything multiple times,
+            and she felt anxious if she didn’t follow her strict routine. When she started university, she realized her
+            disorder was affecting her ability to focus and enjoy life.
+            She decided to visit Calmora and was diagnosed with OCD. She started cognitive-behavioral therapy and
+            learned techniques to manage her thoughts.
+            After months of treatment, Reem was able to control her compulsions and live a more peaceful life.
+          </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+      </div>
+      <!-- Cards 6-->
+
+      <div class="card">
+        <img src="imgs/boy.jpg" alt="Story 6">
+        <div class="card-content">
+          <h3 id="card6-title">"Khaled: Conquering Panic Attacks"</h3>
+          <p id="card6-text">Khaled was living a normal life until he experienced his first panic attack at work.</p>
+          <span class="more-text">
+            He felt intense fear, shortness of breath, a racing heartbeat, and the terrifying sensation that he was
+            about to die.
+            After that episode, he lived in constant fear of another attack, avoiding crowded places and social
+            interactions.
+            At first, he thought he had a physical illness, but after several medical tests and our Test, he discovered
+            that he was
+            suffering from a panic disorder.
+            He started therapy, where he learned breathing exercises and how to manage negative thoughts.
+            Today, Khaled no longer fears panic attacks—he has become stronger and more aware of how to deal with
+            anxiety.
+          </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+      </div>
+
+    </div>
+    <p class="down">These real-life stories show that no matter how difficult the struggle,
+      healing is possible with the right support and treatment.<br> Calmora could be a safe space for people going
+      through similar experiences, offering them guidance and hope. 🤍
+    </p>
+  </section>
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Back to Top">⇮</button>
+
+
+  <!-- ---------------------------------------------------------------------------- -->
+  <script>
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+    readMoreButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const card = this.closest('.card');
+        const isExpanded = card.classList.contains('expanded');
+
+        const currentExpanded = document.querySelector('.card.expanded');
+        if (currentExpanded && currentExpanded !== card) {
+          currentExpanded.classList.remove('expanded');
+          document.body.classList.remove('overlay-active');
+          const oldButton = currentExpanded.querySelector('.read-more-btn');
+          if (oldButton) oldButton.textContent = 'Read More';
+          const overlay = document.querySelector('.card-overlay');
+          if (overlay) overlay.remove();
+        }
+
+        card.classList.toggle('expanded');
+        document.body.classList.toggle('overlay-active');
+
+        this.textContent = isExpanded ? 'Read More' : 'Read Less';
+
+        if (!isExpanded) {
+          const overlay = document.createElement('div');
+          overlay.classList.add('card-overlay');
+          document.body.appendChild(overlay);
+
+          overlay.addEventListener('click', () => {
+            card.classList.remove('expanded');
+            document.body.classList.remove('overlay-active');
+            overlay.remove();
+            btn.textContent = 'Read More';
+          });
+        } else {
+          const overlay = document.querySelector('.card-overlay');
+          if (overlay) overlay.remove();
+        }
+      });
+    });
+
+  </script>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

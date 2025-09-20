@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calmora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="imgs/Calmora.png" type="image/png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Riot&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/btn-animations.css">
+  <link rel="stylesheet" href="css/service.css">
+
+
+</head>
+
+<body>
+  <!-- ------------------------------- navbar ------------------------------- -->
+  <nav class="navbar navbar-expand-lg bg-dark sticky-top color1">
+    <img src="imgs/Calmora.png" alt="LOGO" class="logo">
+    <span class="Calmora">
+      <h2>Calmora</h2>
+    </span>
+    <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-2">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="Test.html">Mental Test</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Categories</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="services.html">Services</a></li>
+            <li><a class="dropdown-item" href="index.html#Therapist">Therapist</a></li>
+            <li><a class="dropdown-item" href="Stories.html">Stories</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#contact-us">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 ms-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-dark me-3" type="button">Search</button>
+        <span id="username-display" class="text-white me-3 fw-bold" style="padding: 0%; margin: -10px;"></span>
+        <button id="show-login" class="btn btn-outline-dark me-2" type="button">Login</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Login Modal -->
+  <div class="login-modal">
+    <div class="container-modal" id="container">
+      <button id="close">X</button>
+      <div class="form-container-modal sign-up">
+        <form id="signup-form">
+          <h1 class="fs-2">Create Account</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email & password</span>
+          <input type="text" placeholder="Name" id="signup-name" required />
+          <input type="email" placeholder="Email" id="signup-email" required />
+          <input type="password" placeholder="Password" id="signup-password" required />
+          <a href="#" id="pass">Forget Your Password?</a>
+          <div class="text-box">
+             <button type="submit" id="signup-btn" class="btn-animation btn-animation-white btn-animation-animate">
+              Create_Account
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="form-container-modal sign-in">
+        <form id="signin-form">
+          <h1>Sign In</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>or use your email & password</span>
+          <input type="email" placeholder="Email" id="signup-email" required />
+          <input type="password" placeholder="Password" id="signup-password" required />
+          <a href="#" id="pass">Forget Your Password?</a>
+          <div class="text-box">
+            <button type="submit" id="signin-btn" class="btn-animation btn-animation-white btn-animation-animate">Sign_In</button>
+          </div>
+        </form>
+      </div>
+      <div class="toggle-container-modal">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Welcome Back!</h1>
+            <p>Enter your personal details to use all of site features</p>
+            <button class="hidden modal-button" id="login">Sign In</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Hello</h1>
+            <p>Register with your personal details to use all of site features</p>
+            <button class="hidden modal-button" id="register">Create Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="language-switcher">
+    <a href="service-arabic.html" class="language-btn">العربيه</a>
+  </div>
+  <!-- ============= Accordion Header ============= -->
+  <div class="card mb-3">
+    <div class="card-body1">
+      <h1 class="card-title position-absolute top-50 start-50 translate-middle">Service & Advice</h1>
+    </div>
+  </div>
+  <!-- ========================================== -->
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <h1 class="ms-5 mt-5 mb-5">Mental Health Between Partners</h1>
+    <video class="vedioo" controls id="myVideo" muted>
+      <source src="imgs/partners.mp4" type="video/mp4">
+    </video>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed fs-5 fw-bold " style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+          aria-controls="flush-collapseOne">
+          1. Effective Communication
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Emotional stability allows partners to express their thoughts, feelings, and needs
+          in a clear and respectful manner. Poor mental health, on the other hand, can lead to miscommunication,
+          misunderstandings, and conflict.
+          <br>
+          When both partners are mentally healthy, they are more likely to engage in open, honest, and empathetic
+          conversations, which strengthens their bond.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+          aria-controls="flush-collapseTwo">
+          2. Emotional Support
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">A strong relationship involves providing emotional support to each other. Partners
+          who are aware of their own mental health and that of their partner are better equipped to offer comfort,
+          encouragement, and validation.
+          <br>
+          When mental health is compromised, it may be harder for one or both partners to provide or accept support,
+          leading to feelings of isolation or resentment.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+          aria-controls="flush-collapseThree">
+          3. Conflict Resolution
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Mental health influences how partners handle conflicts. Mentally healthy individuals
+          are more likely to approach disagreements with patience and a solution-oriented mindset.
+          <br>
+          Conversely, anxiety, depression, or unmanaged stress can lead to heightened emotions, impulsive reactions, and
+          difficulty resolving conflicts constructively, which can harm the relationship.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingFour">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+          aria-controls="flush-collapseFour">
+          4. Mutual Growth and Understanding
+        </button>
+      </h2>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Mental health fosters emotional intelligence, which helps partners understand and
+          respond to each other’s needs. Healthy mental states contribute to empathy, compassion, and the ability to
+          navigate each other's vulnerabilities with care.
+          <br>
+          Partners can grow together, develop mutual respect, and enhance their emotional connection when mental health
+          is a priority.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingFive">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false"
+          aria-controls="flush-collapseFive">
+          5.Reducing Stress and Strain
+        </button>
+      </h2>
+      <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Mental health challenges such as anxiety, depression, or trauma can create strain in
+          relationships.
+          <br>
+          When partners work together to address mental health needs, it reduces the emotional burden and stress that
+          these challenges may cause.
+          <br>
+          Seeking help together, whether through therapy or communication, can alleviate stress and improve the dynamics
+          of the relationship.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingSix">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false"
+          aria-controls="flush-collapseSix">
+          6. Building Trust and Intimacy
+        </button>
+      </h2>
+      <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Trust and intimacy thrive when both partners feel emotionally secure. Mental health
+          issues, if not addressed, can lead to insecurities, distrust, or a lack of emotional closeness.
+          <br>
+          A healthy mental state enables vulnerability and openness, allowing for deeper emotional and physical
+          intimacy.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingSeven">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false"
+          aria-controls="flush-collapseSeven">
+          7. Promoting Individual Well-being
+        </button>
+      </h2>
+      <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">A strong relationship involves providing emotional support to each other. Partners
+          who are aware of their own mental health and that of their partner are better equipped to offer comfort,
+          encouragement, and validation.</div>
+      </div>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingEight">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false"
+          aria-controls="flush-collapseEight">
+          8. Creating a Healthy Environment
+        </button>
+      </h2>
+      <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">A mentally healthy relationship creates a safe and nurturing environment for both
+          partners. It fosters positive habits, like good communication, active listening, and the ability to deal with
+          stress in healthy ways.
+          <br>
+          This environment benefits not only the couple but also any children or family members, as they model positive
+          mental health practices for others.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingNine">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false"
+          aria-controls="flush-collapseNine">
+          9. Preventing Relationship Breakdown
+        </button>
+      </h2>
+      <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Mental health issues left untreated can lead to breakdowns in relationships due to
+          emotional distance, increased conflict, or neglect of the partner’s needs.
+          <br>
+          Prioritizing mental health through self-care, seeking professional help, and maintaining open communication
+          can prevent these issues from escalating and damaging the relationship.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingTen">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false"
+          aria-controls="flush-collapseTen">
+          10. Shared Happiness and Fulfillment
+        </button>
+      </h2>
+      <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Partners with good mental health are more likely to feel happy and fulfilled in
+          their relationship. They can enjoy shared experiences, support each other's personal goals, and contribute to
+          each other’s happiness.
+          <br>
+          When both partners are mentally healthy, they can navigate life's challenges together, leading to a more
+          satisfying and balanced relationship.
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container1">
+      <div class="text">
+        <div class="title-container">
+          <h1 id="work">The Importance of Mental Health in the Workplace</h1>
+        </div>
+        <h2>1. Boosts Employee Productivity</h2>
+        <p> When employees are mentally healthy, they are more focused, energized, and motivated. Good mental health
+          helps workers stay engaged in their tasks,
+          think critically, and perform efficiently. On the other hand, mental health issues such as anxiety,
+          depression, or burnout can significantly reduce productivity,
+          leading to mistakes, delays, and lower work output. By supporting mental health, employers can ensure that
+          their teams are working at their full potential.</p>
+
+        <h2>2. Reduces Absenteeism and Presenteeism</h2>
+        <p> Mental health problems are one of the leading causes of absenteeism in the workplace. Employees suffering
+          from mental health challenges
+          are more likely to take sick days or extended leave. However, even when they are at work, mental health issues
+          can cause presenteeism—when employees show up
+          but are unable to perform at their best. By addressing mental health concerns, employers can reduce both
+          absenteeism and presenteeism, leading to a more efficient and
+          productive workforce.</p>
+
+        <h2>3. Fosters a Positive Work Environment</h2>
+        <p>Organizations that prioritize mental health create a supportive and inclusive culture where employees feel
+          valued and understood.
+          A positive work environment leads to higher job satisfaction, improved morale, and stronger employee
+          retention. When mental health is taken seriously,
+          employees are more likely to feel comfortable discussing any challenges they are facing, which can lead to
+          early interventions and better support systems.</p>
+
+        <h2>4. Enhances Employee Engagement and Retention</h2>
+        <p>Employees who feel mentally supported are more likely to be engaged in their work and committed to the
+          organization. Mental health initiatives,
+          such as employee assistance programs, mental health days, and flexible work arrangements, help retain top
+          talent. Engaged employees are more likely to stay with an
+          organization, reducing turnover and the associated costs of hiring and training new employees.</p>
+
+        <h2>5. Improves Creativity and Innovation</h2>
+        <p>A healthy mind is more open to new ideas and problem-solving. When employees are not overwhelmed by stress or
+          mental health issues, they have the capacity to
+          think creatively, innovate, and contribute to the growth of the organization. Mental health support can
+          provide a conducive environment where employees feel
+          confident enough to share new ideas and challenge the status quo, which is crucial for fostering innovation in
+          a competitive business world.</p>
+
+        <h2>6. Supports Work-Life Balance</h2>
+        <p>A strong emphasis on mental health at work helps employees maintain a healthy work-life balance. Mental
+          health issues often arise when employees are overworked,
+          stressed, or unable to manage personal and professional responsibilities effectively. By promoting mental
+          well-being and offering flexible schedules, employers help
+          employees strike a balance, which in turn reduces stress and increases overall satisfaction.</p>
+
+        <h2><b>Conclusion</b></h2>
+        <p>Investing in mental health at work is a win-win for both employees and employers. A mentally healthy
+          workforce is more productive, engaged, and committed to
+          the organization's goals. By creating a supportive environment and providing resources for mental health care,
+          employers can improve the overall work culture,
+          boost morale, and drive success. Ultimately, organizations that prioritize mental health not only improve the
+          well-being of their employees but also increase their
+          own profitability and long-term sustainability.</p>
+
+      </div>
+    </div>
+
+    <h1 class="ms-5 mt-5 mb-5" id="disorders">Common Mental Disorders</h1>
+    <video class="vedioo" controls id="myVideo" muted>
+      <source src="imgs/help.mp4" type="video/mp4">
+    </video>
+
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingEleven">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false"
+          aria-controls="flush-collapseEleven">
+          1. Depression
+        </button>
+      </h2>
+      <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Description: A chronic condition characterized by intense sadness and loss of interest or pleasure in daily
+          activities, often accompanied by anxiety or guilt.
+          <br>
+          Treatment:
+          <br>
+          Cognitive Behavioral Therapy (CBT)<br>
+          Antidepressants such as SSRIs or SNRIs<br>
+          Psychotherapy (talk therapy)<br>
+          Regular exercise, meditation, and mindfulness techniques
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingTwelve">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false"
+          aria-controls="flush-collapseTwelve">
+          2. Schizophrenia
+        </button>
+      </h2>
+      <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Description: A serious mental disorder that affects thinking, feeling, and behavior, and may lead to
+          hallucinations, delusions, and disorganized thinking.
+          <br>
+          Treatment:
+          <br>
+          Antipsychotic medications<br>
+          Cognitive Behavioral Therapy (CBT)<br>
+          Psychological and social interventions<br>
+          Supportive therapy and rehabilitation programs
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingTherteen">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseTherteen" aria-expanded="false"
+          aria-controls="flush-collapseTherteen">
+          3. Anxiety Disorders
+        </button>
+      </h2>
+      <div id="flush-collapseTherteen" class="accordion-collapse collapse" aria-labelledby="flush-headingTherteen"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Description: A group of mental disorders characterized by excessive fear, anxiety, or tension, often leading
+          to avoidant behavior.
+          <br>
+          Treatment:
+          <br>
+          Cognitive Behavioral Therapy (CBT)<br>
+          Medications such as benzodiazepines or antidepressants<br>
+          Relaxation techniques (breathing exercises, mindfulness)<br>
+          Exposure therapy in cases of phobia or panic attacks
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingFourteen">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseFourteen" aria-expanded="false"
+          aria-controls="flush-collapseFourteen">
+          4. Bipolar Disorder
+        </button>
+      </h2>
+      <div id="flush-collapseFourteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourteen"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Description: A mood disorder characterized by extreme mood swings, including manic (high energy) and
+          depressive (low energy) episodes.
+          <br>
+          Treatment:
+          <br>
+          Mood stabilizers (such as lithium)<br>
+          Antidepressants and antipsychotics<br>
+          Psychotherapy (CBT and interpersonal therapy)<br>
+          Lifestyle management, including sleep and stress management techniques
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingFiveteen">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseFiveteen" aria-expanded="false"
+          aria-controls="flush-collapseFiveteen">
+          5. Post-Traumatic Stress Disorder (PTSD)
+        </button>
+      </h2>
+      <div id="flush-collapseFiveteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFiveteen"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Description: A condition resulting from exposure to a traumatic event, leading to recurring memories,
+          nightmares, and severe anxiety.
+          <br>
+          Treatment:
+          <br>
+          CBT with exposure techniques<br>
+          Eye Movement Desensitization and Reprocessing (EMDR)<br>
+          Antidepressants or anti-anxiety medications<br>
+          Group therapy or support groups
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingSixteen">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseSixteen" aria-expanded="false"
+          aria-controls="flush-collapseSixteen">
+          6. Obsessive-Compulsive Disorder (OCD)
+        </button>
+      </h2>
+      <div id="flush-collapseSixteen" class="accordion-collapse collapse" aria-labelledby="flush-headingSixteen"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Description: A disorder characterized by intrusive and disturbing thoughts (obsessions) and compulsive
+          behaviors performed to reduce anxiety.
+          <br>
+          Treatment:
+          <br>
+          Cognitive Behavioral Therapy (exposure and response prevention)<br>
+          SSRIs<br>
+          Habit reversal training<br>
+          Relaxation techniques such as meditation and mindfulness
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingSeventeen">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseSeventeen" aria-expanded="false"
+          aria-controls="flush-collapseSeventeen">
+          7. Attention Deficit Hyperactivity Disorder (ADHD)
+        </button>
+      </h2>
+      <div id="flush-collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="flush-headingSeventeen"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Description: A neurodevelopmental disorder characterized by difficulty focusing, hyperactivity, and impulsive
+          behavior.
+          <br>
+          Treatment:
+          <br>
+          Stimulant medications (such as Ritalin, Adderall)<br>
+          Behavioral therapy and skills training<br>
+          Organizational training<br>
+          Time management techniques
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingEighteen">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseEighteen" aria-expanded="false"
+          aria-controls="flush-collapseEighteen">
+          8. Eating Disorders
+        </button>
+      </h2>
+      <div id="flush-collapseEighteen" class="accordion-collapse collapse" aria-labelledby="flush-headingEighteen"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Description: Disorders such as anorexia nervosa, bulimia nervosa, and binge eating disorder, characterized by
+          abnormal eating habits that negatively affect health.
+          <br>
+          Treatment:
+          <br>
+          Nutritional counseling<br>
+          Cognitive Behavioral Therapy (CBT)<br>
+          Family-based therapy (especially for adolescents)<br>
+          Medical monitoring and ongoing healthcare
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingNineteen">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseNineteen" aria-expanded="false"
+          aria-controls="flush-collapseNineteen">
+          9. Borderline Personality Disorder (BPD)
+        </button>
+      </h2>
+      <div id="flush-collapseNineteen" class="accordion-collapse collapse" aria-labelledby="flush-headingNineteen"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Description: A psychological disorder characterized by emotional instability, behavioral difficulties, and
+          unstable relationships, with a constant fear of abandonment.
+          <br>
+          Treatment:
+          <br>
+          Dialectical Behavior Therapy (DBT)<br>
+          Cognitive Behavioral Therapy (CBT)<br>
+          Mood stabilizers<br>
+          Group therapy and support networks
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingTwinty">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseTwinty" aria-expanded="false"
+          aria-controls="flush-collapseTwinty">
+          10. Social Anxiety Disorder
+        </button>
+      </h2>
+      <div id="flush-collapseTwinty" class="accordion-collapse collapse" aria-labelledby="flush-headingTwinty"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Description: A condition characterized by intense fear of social situations, leading to avoidance and stress
+          during social interactions.
+          <br>
+          Treatment:
+          <br>
+          Cognitive Behavioral Therapy (CBT)<br>
+          Exposure therapy to reduce fear<br>
+          Anti-anxiety or antidepressant medications<br>
+          Social skills training and relaxation techniques
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="flush-headingTwentyOne">
+        <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyOne" aria-expanded="false"
+          aria-controls="flush-collapseTwentyOne">
+          11. Trust Issues
+        </button>
+      </h2>
+      <div id="flush-collapseTwentyOne" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyOne"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          Description: Difficulty in trusting others due to past experiences or trauma, leading to challenges in
+          building relationships.
+          <br>
+          Treatment:
+          <br>
+          Cognitive Behavioral Therapy (CBT)<br>
+          Trust-building exercises and communication skills training<br>
+          Individual or group therapy<br>
+          Journaling and reflection on past experiences
+        </div>
+      </div>
+      <hr>
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="flush-headingTwentyTwo">
+          <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyTwo" aria-expanded="false"
+            aria-controls="flush-collapseTwentyTwo">
+            12. Trauma
+          </button>
+        </h2>
+        <div id="flush-collapseTwentyTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyTwo"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            Description: Psychological injury resulting from a distressing or traumatic event, which may leave long-term
+            emotional and mental effects.
+            <br>
+            Treatment:
+            <br>
+            Trauma-focused Cognitive Behavioral Therapy (CBT)<br>
+            Eye Movement Desensitization and Reprocessing (EMDR)<br>
+            Support groups and peer counseling<br>
+            Mindfulness, meditation, and relaxation techniques
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container2">
+        <div class="text">
+          <div class="title-container">
+            <h1 id="family" style="color: white;">Mental Health in the Family: A Key to Healthy Relationships</h1>
+            <img src="./imgs/family.jpg" alt="im">
+          </div>
+          <h2>1. The Role of the Family in Mental Health</h2>
+          <p>The family serves as the primary support system for its members. Parents and caregivers set
+            the foundation for mental health by modeling positive coping strategies, communication,
+            and emotional regulation. Children often look up to their parents as role models and learn how
+            to handle stress, anxiety, and other emotions based on how their parents react to situations.
+            When a family creates an open and supportive environment, it helps reduce stigma surrounding
+            mental health issues and encourages members to seek help when needed.</p>
+
+          <h2>2. Communication: The Key to Addressing Mental Health Issues</h2>
+          <p>Open and honest communication is essential for maintaining good mental health within a family.
+            When family members are encouraged to express their feelings and talk about challenges,
+            they are more likely to feel heard and supported. By fostering an environment where it is safe
+            to discuss mental health, families can prevent issues from escalating and offer support to those
+            in need. Lack of communication or avoiding difficult topics can lead to emotional isolation
+            and worsen mental health problems.</p>
+
+          <h2>3. The Impact of Parental Mental Health on Children</h2>
+          <p>The mental health of parents significantly impacts the children’s mental well-being.
+            Parents who struggle with mental health challenges such as depression, anxiety, or substance abuse may
+            unintentionally create a stressful environment that can affect their children's emotional development.
+            Children who grow up in households with untreated mental health problems may develop their own issues, such
+            as low self-esteem, anxiety, or difficulty in forming healthy relationships later in life.
+            It is crucial for parents to address their mental health concerns and
+            seek help when needed to ensure they provide a stable, nurturing environment for their children.</p>
+
+          <h2>4. Creating a Supportive Family Environment</h2>
+          <p>To nurture good mental health, it’s important for families to create a safe and supportive
+            environment. This can include spending quality time together, practicing positive communication,
+            and engaging in activities that promote relaxation and connection, such as family outings,
+            exercises, or hobbies. Supportive families provide emotional comfort, reduce stress, and offer a
+            sense of belonging, which all contribute to a stronger mental state for each member.</p>
+
+          <h2>5. Recognizing Signs of Mental Health Struggles</h2>
+          <p>It is important for family members to recognize the signs of mental health struggles in each other.
+            Changes in behavior, mood swings, withdrawal from social activities, and difficulty concentrating
+            can be indicators of mental health issues. Early recognition and intervention can prevent more
+            serious issues from developing and allow for proper treatment and support. When family members
+            are aware of each other’s emotional states, they can provide appropriate help, whether
+            it is seeking professional therapy, providing emotional support, or offering reassurance.</p>
+
+          <h2>6. The Impact of Family Dynamics on Mental Health</h2>
+          <p>Family dynamics play a significant role in shaping an individual’s mental health. A supportive,
+            cohesive family unit can act as a buffer against stress and mental health issues. On the other hand,
+            dysfunctional family relationships, such as constant conflict, lack of support, or emotional
+            neglect, can increase the risk of developing mental health problems. Families that encourage
+            mutual respect, understanding,and cooperation are more likely to foster better mental health outcomes for
+            all members.</p>
+
+          <h2>7. The Importance of Seeking Professional Help</h2>
+          <p>In some cases, mental health struggles may require professional intervention. Families should
+            not hesitate to seek therapy or counseling when dealing with significant mental health issues,
+            whether it is for a child, a parent, or another family member. Professional therapists and counselors
+            can provide guidance on how to manage mental health challenges and improve family dynamics.
+            Mental health professionals also help identify underlying issues that may not be immediately
+            obvious, such as trauma, past experiences, or unresolved conflicts.</p>
+
+          <h2><b>Conclusion</b></h2>
+          <p>Mental health within the family is vital for creating a strong, supportive foundation for every
+            individual. When mental health is prioritized, family members feel more connected, understood,
+            and capable of dealing with life's challenges. By fostering communication, providing emotional
+            support, and recognizing signs of mental health struggles early, families can build a resilient
+            and mentally healthy environment. Mental health is not just an individual concern—it’s a family
+            affair. Taking care of mental well-being within the family strengthens relationships and ensures that
+            everyone has the resources they need to thrive.</p>
+
+        </div>
+      </div>
+
+
+      <h1 class="ms-5 mt-5 mb-5" id="sport">Exercise and physical activity</h1>
+      <video class="vedioo" controls id="myVideo" muted>
+        <source src="imgs/sport.mp4" type="video/mp4">
+      </video>
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="flush-headingTwintyThree">
+          <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwintyThree" aria-expanded="false"
+            aria-controls="flush-collapseTwintyThree">
+            1. Reduces Symptoms of Anxiety and Depression
+          </button>
+        </h2>
+        <div id="flush-collapseTwintyThree" class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwintyThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Regular physical activity boosts the production of endorphins, the body's natural
+            mood lifters.
+            <br>
+            Exercise helps reduce the symptoms of both anxiety and depression by promoting relaxation, lowering stress
+            hormones, and improving overall emotional well-being.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="flush-headingTwintyFour">
+          <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwintyFour" aria-expanded="false"
+            aria-controls="flush-collapseTwintyFour">
+            2. Boosts Mood and Energy Levels
+          </button>
+        </h2>
+        <div id="flush-collapseTwintyFour" class="accordion-collapse collapse" aria-labelledby="flush-headingTwintyFour"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Exercise increases the production of neurotransmitters like serotonin and
+            dopamine, which improve mood and help in feeling more positive.
+            <br>
+            It also enhances energy levels, helping individuals feel more active and less fatigued throughout the day.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="flush-headingTwintyFive">
+          <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwintyFive" aria-expanded="false"
+            aria-controls="flush-collapseTwintyFive">
+            3. Improves Sleep Quality
+          </button>
+        </h2>
+        <div id="flush-collapseTwintyFive" class="accordion-collapse collapse" aria-labelledby="flush-headingTwintyFive"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Regular exercise can help regulate sleep patterns, making it easier to fall asleep
+            and stay asleep.
+            <br>
+            Quality sleep is essential for emotional resilience and reducing stress and anxiety.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="flush-headingTwintySix">
+          <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwintySix" aria-expanded="false"
+            aria-controls="flush-collapseTwintySix">
+            4. Increases Self-Esteem and Confidence
+          </button>
+        </h2>
+        <div id="flush-collapseTwintySix" class="accordion-collapse collapse" aria-labelledby="flush-headingTwintySix"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Physical fitness achievements, such as meeting exercise goals or improving
+            strength and endurance, contribute to higher self-esteem and confidence.
+            <br>
+            Feeling physically stronger and healthier can positively impact one's mental outlook and self-image.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="flush-headingTwintySeven">
+          <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwintySeven" aria-expanded="false"
+            aria-controls="flush-collapseTwintySeven">
+            5. Reduces Stress
+          </button>
+        </h2>
+        <div id="flush-collapseTwintySeven" class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwintySeven" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Exercise helps reduce the body’s level of cortisol (the stress hormone), which can
+            lead to better stress management.
+            <br>
+            Physical activity also provides a healthy outlet to channel negative emotions and release tension.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="flush-headingTwintyEight">
+          <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwintyEight" aria-expanded="false"
+            aria-controls="flush-collapseTwintyEight">
+            6. Improves Cognitive Function
+          </button>
+        </h2>
+        <div id="flush-collapseTwintyEight" class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwintyEight" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Exercise increases blood flow to the brain, improving cognitive function,
+            concentration, memory, and problem-solving skills.
+            <br>
+            Staying active also reduces the risk of cognitive decline as people age.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="flush-headingTwintyNine">
+          <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwintyNine" aria-expanded="false"
+            aria-controls="flush-collapseTwintyNine">
+            7. Encourages Social Interaction
+          </button>
+        </h2>
+        <div id="flush-collapseTwintyNine" class="accordion-collapse collapse" aria-labelledby="flush-headingTwintyNine"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Participating in group exercises, team sports, or gym classes can promote social
+            interaction, providing support, reducing feelings of loneliness, and fostering a sense of community.
+            <br>
+            Social connection is essential for mental well-being, and group exercises can help improve this aspect of
+            life.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="flush-headingTherty">
+          <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+            data-bs-toggle="collapse" data-bs-target="#flush-collapseTherty" aria-expanded="false"
+            aria-controls="flush-collapseTherty">
+            8. Acts as a Natural Antidepressant
+          </button>
+        </h2>
+        <div id="flush-collapseTherty" class="accordion-collapse collapse" aria-labelledby="flush-headingTherty"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Studies show that exercise can have similar effects to antidepressant medications
+            in some cases by helping regulate mood and emotions naturally.
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container1">
+      <div class="text">
+        <div class="title-container">
+          <h1 id="advice">Tips for a Happy Life and the Importance of Mental Health</h1>
+        </div>
+
+        <h2>1. Practice Self-Care Regularly</h2>
+        <p>Taking time for yourself is essential for maintaining both physical and mental health. Engage in activities
+          that relax and recharge you, such as reading, taking walks, practicing yoga, or indulging in hobbies. By
+          regularly practicing self-care, you can reduce stress, improve your mood, and enhance your overall well-being.
+        </p>
+
+        <h2>2. Build Strong Relationships</h2>
+        <p>Strong, supportive relationships are key to happiness and mental health. Surround yourself with people who
+          lift you up and make you feel valued. Spending time with loved ones, friends, and family can offer emotional
+          support, reduce loneliness, and help you feel more connected to the world around you. Having a strong social
+          network can buffer you against stress and challenges.</p>
+
+        <h2>3. Exercise Regularly</h2>
+        <p>Physical activity is not only beneficial for your body but also for your mind. Exercise helps to release
+          endorphins, the "feel-good" hormones, which can improve your mood and reduce symptoms of anxiety and
+          depression. Even a daily walk or a few minutes of stretching can have a positive impact on your mental health.
+        </p>
+
+        <h2>4. Maintain a Healthy Work-Life Balance</h2>
+        <p>A balanced life is crucial for both your happiness and mental health. Avoid overworking and make time for
+          activities that bring you joy and relaxation. Setting boundaries between work and personal life helps prevent
+          burnout and allows you to recharge. Be mindful of your time and prioritize what matters most to you.</p>
+
+        <h2>5. Practice Mindfulness and Meditation</h2>
+        <p>Mindfulness and meditation can help you stay present and reduce anxiety about the future or regrets about the
+          past. Taking a few minutes each day to focus on your breath or practice gratitude can improve your emotional
+          resilience and enhance your mental clarity. Regular meditation can help manage stress and improve overall
+          emotional well-being.</p>
+
+        <h2>6. Seek Help When Needed</h2>
+        <p>It’s essential to recognize when you need help and reach out for support. If you’re struggling with stress,
+          anxiety, depression, or any other mental health issue, don't hesitate to seek professional help. Therapy,
+          counseling, or support groups can provide guidance and strategies to cope with life's challenges. Remember,
+          there is no shame in asking for help—taking care of your mental health is a sign of strength.</p>
+
+        <h2>7. Focus on Positive Thinking</h2>
+        <p>Having a positive mindset can significantly influence your happiness and mental health. Try to focus on the
+          good aspects of your life and practice gratitude. When challenges arise, try to see them as opportunities for
+          growth. Focusing on positive thoughts helps reduce negative thinking patterns that can lead to anxiety and
+          depression.</p>
+
+        <h2>8. Get Enough Sleep</h2>
+        <p>Sleep is vital for both physical and mental health. Lack of sleep can lead to irritability, difficulty
+          concentrating, and increased stress. Make sure to get enough rest each night, as quality sleep helps improve
+          mood, cognitive function, and emotional well-being.</p>
+
+        <h2>9. Eat a Balanced Diet</h2>
+        <p>What you eat can affect how you feel. A balanced diet rich in fruits, vegetables, whole grains, and lean
+          proteins can support mental health. Avoid excessive amounts of caffeine, sugar, and processed foods, as they
+          can affect your energy levels and mood. Proper nutrition helps maintain mental clarity and emotional
+          stability.</p>
+      </div>
+    </div>
+
+    <!-- ------------------------------- Contact US ------------------------------- -->
+    <hr class="my-5" id="contact-us">
+    <div class="card mb-3" id="contact-us">
+      <div class="card-body2 color1" style="height: 80px;">
+        <h5 class="card-title position-absolute top-50 start-50 translate-middle">Contact Us</h5>
+      </div>
+    </div>
+
+    <div class="cu-item">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Phone Number:</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="+20123456789">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Details:</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: none;"></textarea>
+      </div>
+      <button type="button" class="btn btn-outline-dark" id="alert" data-bs-container="body" data-bs-toggle="popover"
+        data-bs-placement="right" data-bs-content="SENT" data-bs-trigger="focus">
+        SEND
+      </button>
+    </div>
+    <!-- ------------------------------- FOOTER------------------------------- -->
+    <footer class="footer" id="pageFooter">
+      <div class="footer-top">
+        <div class="logos">
+          <img src="imgs/Calmora.png" alt="Logo 1" class="logo3">
+        </div>
+        <div class="contact-info">
+          <p id="Hint">Mental health is just as important as physical health.<br> Take time for yourself, speak up,
+            seek professional help when needed, and always be kind to yourself.</p>
+          <p id="Hint">"we are here for you,Online 24 Hours"</p>
+          <p></p>
+        </div>
+        <hr>
+        <div class="social-icons">
+          <a href="#" target="_blank" aria-label="Facebook">
+            <img src="imgs/facebook.png" alt="Facebook" class="icons">
+          </a>
+          <a href="#" target="_blank" aria-label="YouTube">
+            <img src="imgs/youtube.png" alt="YouTube" class="icons">
+          </a>
+          <a href="#" target="_blank" aria-label="LinkedIn">
+            <img src="imgs/linkedin.png" alt="LinkedIn" class="icons">
+          </a>
+          <a href="#" target="_blank" aria-label="WhatsApp">
+            <img src="imgs/whatsapp.png" alt="WhatsApp" class="icons">
+          </a>
+          <p><button id="contact"><a href="#contact-us">Contact Us</a></button> </p>
+        </div>
+      </div>
+
+
+      <ol class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#Therapist">Therapist</a></li>
+        <li><a href="Test.html">Test</a></li>
+        <li><a href="Stories.html">Stories</a></li>
+      </ol>
+
+
+      <div class="footer-bottom">
+        <hr>
+        <p class="bottom">Copyright © 2025 General Secretariat for Mental Health and Addiction Treatment</p>
+        <p class="bottom">Developed by <span>DMS</span> - Version 2025</p>
+      </div>
+      <button class="scroll-top-btn" id="scrollTopBtn" title="Back to Top">⇮</button>
+
+    </footer>
+
+
+    <!-- ---------------------------------------------------------------------------- -->
+
+    <script src="./js/main.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

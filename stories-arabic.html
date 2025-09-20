@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calmora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="imgs/Calmora.png" type="image/png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Riot&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/Stories.css">
+  <link rel="stylesheet" href="css/btn-animations.css">
+
+</head>
+
+<body dir="rtl">
+  <!-- ------------------------------- navbar ------------------------------- -->
+  <nav class="navbar navbar-expand-lg bg-dark sticky-top color1">
+    <img src="imgs/Calmora.png" alt="LOGO" class="logo">
+    <span class="Calmora">
+      <h2>Calmora</h2>
+    </span>
+    <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-2">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="arabic.html">الصفحه الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Test-arabic.html">اختبر عقلك</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            الاقسام
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="service-arabic.html">الخدمات</a></li>
+            <li><a class="dropdown-item" href="arabic.html#Therapist">الاطباء</a></li>
+            <li><a class="dropdown-item" href="stories-arabic.html">القصص</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="arabic.html#contact-us">تواصل معنا</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 ms-2" type="search" placeholder="ابحث" aria-label="Search">
+        <button class="btn btn-outline-dark me-3" type="button">ابحث</button>
+
+        <span id="username-display" class="text-white fw-bold me-2"></span>
+        <button class="btn btn-outline-dark me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          id="show-login">سجل الان</button>
+        <button class="btn btn-outline-danger me-2 d-none" id="logout-btn">تسجيل الخروج</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- ------------------------------- Login Form ------------------------------- -->
+  <div class="login-modal" dir="ltr">
+    <div class="container-modal" id="container">
+      <button id="close">X</button>
+
+      <!-- Sign Up Form -->
+      <div class="form-container-modal sign-up">
+        <form id="signup-form">
+          <h1 class="fs-2">انشئ حساب</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>او استخدم الايميل والباسورد</span>
+          <input type="text" placeholder="الاسم" id="signup-name" required />
+          <input type="email" placeholder="الايميل" id="signup-email" required />
+          <input type="password" placeholder="الباسورد" id="signup-password" required />
+          <a href="#" id="pass">هل نسيت الباسورد؟</a>
+          <div class="text-box">
+           <button type="submit" id="signup-btn" class="btn-animation btn-animation-white btn-animation-animate">
+              إنشاء_حساب
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Sign In Form -->
+      <div class="form-container-modal sign-in">
+        <form id="signin-form">
+          <h1>تسجيل دخول</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>او استخدم الايميل والباسورد</span>
+          <input type="email" placeholder="الايميل" id="signup-email" required />
+          <input type="password" placeholder="الباسورد" id="signup-password" required />
+          <a href="#" id="pass">هل نسيت الباسورد؟</a>
+          <div class="text-box">
+            <button type="submit" id="signin-btn" class="btn-animation btn-animation-white btn-animation-animate">تسجيل_دخول</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Toggle -->
+      <div class="toggle-container-modal">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>مرحبا بعودتك!</h1>
+            <p>ادخل معلوماتك لكى تستفيد بخدمات الموقع</p>
+            <button class="hidden modal-button" id="login">تسجيل دخول</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>مرحبا</h1>
+            <p>ادخل معلوماتك لكى تستفيد بخدمات الموقع</p>
+            <button class="hidden modal-button" id="register">انشئ حساب</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="language-switcher">
+    <a href="Stories.html" class="language-btn">English</a>
+  </div>
+
+
+  <p class="title1">
+    هذه بعض التحديات التي واجهها الأشخاص وتمكنوا من التغلب عليها بنجاح بمساعدة موقعنا.
+    <br>
+    <span>شارك تجربتك معنا!</span>
+  </p>
+  <section class="section" id="mental-health">
+    <div class="content-grid">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="imgs/boy.jpg" alt="Story 1">
+        <div class="card-content">
+          <h3 id="card1-title">"أحمد: الرحلة للخروج من الاكتئاب العميق"</h3>
+          <p id="card1-text">
+            كان أحمد شابًا طموحًا، يعمل بجد لتحقيق أحلامه، لكنه بدأ يشعر بفقدان الدافع والإحباط الشديد.
+            <span class="more-text">
+              استمر هذا الشعور لعدة أشهر، مما دفعه إلى العزلة عن أصدقائه وعائلته. لم يكن يعرف السبب، لكنه فقد الاهتمام
+              بكل شيء حوله.
+              في يوم من الأيام، قرر طلب المساعدة ووجد موقعنا ثم شعر انه امل من جديد وطلب المساعده من طبيبنا. تم تشخيصه
+              بالاكتئاب السريري وبدأ في العلاج المعرفي السلوكي. بالإضافة إلى العلاج،
+              شارك في التمارين الرياضية وكتابة اليوميات للتعبير عن مشاعره. بعد شهور من الالتزام بالعلاج ودعم عائلته، بدأ
+              أحمد في التحسن.
+              اليوم، أصبح أكثر وعيًا بصحته النفسية ويساعد الآخرين الذين يواجهون تحديات مماثلة.
+            </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">اقرأ المزيد</button>
+        </div>
+      </div>
+
+      <!-- Cards 2 -->
+      <div class="card">
+        <img src="imgs/girl.png" alt="Story 2">
+        <div class="card-content">
+          <h3 id="card2-title">"سارة: التغلب على القلق الاجتماعي والعزلة"</h3>
+          <p id="card2-text">منذ الطفولة، كانت سارة خجولة للغاية وكانت تشعر بالقلق عند التحدث مع الآخرين. مع تقدمها في
+            العمر، أصبحت المشكلة أسوأ، و</p>
+          <span class="more-text">
+            أصبحت مرعوبة من التفاعلات الاجتماعية، متجنبة المواقف التي تتطلب التواصل. كان الذهاب إلى الجامعة كابوسًا
+            بالنسبة لها—كانت تعاني من نوبات الذعر قبل
+            كل محاضرة أو اجتماع جماعي. مع تشجيع من صديقة، زارت موقعنا واكتشفت أنها تعاني من اضطراب القلق الاجتماعي. بدأت
+            في العلاج السلوكي،
+            وأخذت خطوات صغيرة للتغلب على مخاوفها، مثل بدء محادثات قصيرة مع الغرباء والتدرب على التحدث أمام المرآة.
+            اليوم، أصبحت سارة أكثر ثقة وتعيش حياتها دون الخوف من الحكم عليها.
+          </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">اقرأ المزيد</button>
+        </div>
+      </div>
+      <!-- Cards 3 -->
+
+      <div class="card">
+        <img src="imgs/girl.png" alt="Story 3">
+        <div class="card-content">
+          <h3 id="card3-title">"ليلى: النجاة من اضطراب ما بعد الصدمة (PTSD)"</h3>
+          <p id="card3-text">تعرضت ليلى لحادث سير مروع كاد أن يأخذ حياتها. على الرغم من أنها تعافت جسديًا، إلا أن عقلها
+            ظل عالقًا في الصدمة.</p>
+          <span class="more-text">
+            كانت تعاني من كوابيس متكررة وخوف شديد كلما سمعت صوت الفرامل أو رأت السيارات المسرعة.
+            لم تكن تفهم ما كان يحدث لها حتى اقترح الطبيب أن يساعدها اخصائى نفسى واقترح عليها موقعنا لكفائته. تم تشخيصها
+            باضطراب ما بعد الصدمة وبدأت في العلاج الذي شمل تقنيات الاسترخاء والعلاج بالكلام.
+            مع مرور الوقت، استعادت السيطرة على حياتها وأصبحت أكثر وعيًا بكيفية إدارة الصدمة النفسية.
+          </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">اقرأ المزيد</button>
+        </div>
+      </div>
+      <!-- Cards 4 -->
+
+      <div class="card">
+        <img src="imgs/boy.jpg" alt="Story 4">
+        <div class="card-content">
+          <h3 id="card4-title">"ياسين: من الاكتئاب الشديد إلى تحقيق أحلامه"</h3>
+          <p id="card4-text">كان ياسين طالبًا متفوقًا، لكنه تعرض لضغوط نفسية شديدة بسبب دراسته الجامعية والتوقعات
+            العالية من عائلته.</p>
+          <span class="more-text">
+            بدأ يشعر بالإرهاق، وفقد شغفه بالحياة، ولم يعد يجد متعة في أي شيء. ومع مرور الوقت، تفاقمت حالته إلى اكتئاب
+            شديد،
+            مما دفعه إلى العزلة التامة عن أصدقائه وعائلته. بعد عدة محاولات لإخفاء معاناته، أخيرًا فتح قلبه لأحد أساتذته،
+            الذي نصحه بموقعنا . بدأ ياسين العلاج، وشارك في الأنشطة البدنية، وبدأ في التعبير الإبداعي من خلال الكتابة
+            والرسم.
+            اليوم، ليس فقط أنه تعافى، بل يساعد أيضًا الطلاب الآخرين الذين يعانون من الضغوط الأكاديمية.
+          </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">اقرأ المزيد</button>
+        </div>
+      </div>
+      <!-- Cards 5 -->
+
+      <div class="card">
+        <img src="imgs/girl.png" alt="قصة 5">
+        <div class="card-content">
+          <h3 id="card5-title">"ريم: التغلب على اضطراب الوسواس القهري (OCD)"</h3>
+          <p id="card5-text">كانت ريم دائمًا منظمة، لكنها لم تدرك أن هوسها بالنظافة والترتيب كان في الواقع اضطرابًا في
+            الصحة النفسية.</p>
+          <span class="more-text">
+            كانت تقضي ساعات في غسل يديها وكان لديها أفكار وسواسية جعلت الحياة اليومية صعبة. لم تستطع مغادرة منزلها دون
+            التحقق من كل شيء عدة مرات،
+            وكانت تشعر بالقلق إذا لم تتبع روتينها الصارم. عندما بدأت في الجامعة، أدركت أن اضطرابها كان يؤثر على قدرتها
+            على التركيز والاستمتاع بالحياة.
+            قررت زيارة موقعنا وتم تشخيصها بالوسواس القهري. بدأت العلاج السلوكي المعرفي وتعلمت تقنيات لإدارة أفكارها.
+            بعد أشهر من العلاج، تمكنت ريم من السيطرة على هوسها وعيش حياة أكثر هدوءًا.
+          </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">اقرأ المزيد</button>
+        </div>
+      </div>
+      <!-- Cards 6 -->
+
+      <div class="card">
+        <img src="imgs/boy.jpg" alt="قصة 6">
+        <div class="card-content">
+          <h3 id="card6-title">"خالد: التغلب على نوبات الهلع"</h3>
+          <p id="card6-text">كان خالد يعيش حياة طبيعية حتى تعرض لأول نوبة هلع في عمله.</p>
+          <span class="more-text">
+            شعر بخوف شديد، وضيق في التنفس، وتسارع في نبضات القلب، والإحساس المرعب بأنه على وشك الموت.
+            بعد تلك النوبة، عاش في خوف مستمر من نوبة أخرى، متجنبًا الأماكن المزدحمة والتفاعلات الاجتماعية.
+            في البداية، اعتقد أنه يعاني من مرض جسدي، ولكن بعد عدة اختبارات طبية وبعد اداؤه لاختبارنا، اكتشف أنه يعاني من
+            اضطراب الهلع.
+            بدأ العلاج حيث تعلم تمارين التنفس وكيفية إدارة الأفكار السلبية.
+            اليوم، لم يعد خالد يخاف من نوبات الهلع—لقد أصبح أقوى وأكثر وعيًا بكيفية التعامل مع القلق.
+          </span>
+          </p>
+          <button class="read-more-btn" onclick="toggleReadMore(this)">اقرأ المزيد</button>
+        </div>
+      </div>
+
+    </div>
+    <p class="down">تُظهر هذه القصص الحقيقية أنه بغض النظر عن مدى صعوبة الصراع،
+      الشفاء ممكن مع الدعم والعلاج المناسبين.<br> قد تكون "كالمورا" مساحة آمنة للأشخاص الذين يمرون بتجارب مماثلة،
+      تقدم لهم الإرشاد والأمل. 🤍
+    </p>
+  </section>
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Back to Top">⇮</button>
+
+
+  <script>
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+    readMoreButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const card = this.closest('.card');
+        const isExpanded = card.classList.contains('expanded');
+
+        const currentExpanded = document.querySelector('.card.expanded');
+        if (currentExpanded && currentExpanded !== card) {
+          currentExpanded.classList.remove('expanded');
+          document.body.classList.remove('overlay-active');
+          const oldButton = currentExpanded.querySelector('.read-more-btn');
+          if (oldButton) oldButton.textContent = 'اقرأ المزيد';
+          const overlay = document.querySelector('.card-overlay');
+          if (overlay) overlay.remove();
+        }
+
+        card.classList.toggle('expanded');
+        document.body.classList.toggle('overlay-active');
+
+        this.textContent = isExpanded ? 'اقرأ المزيد' : 'اقرا اقل';
+
+        if (!isExpanded) {
+          const overlay = document.createElement('div');
+          overlay.classList.add('card-overlay');
+          document.body.appendChild(overlay);
+
+          overlay.addEventListener('click', () => {
+            card.classList.remove('expanded');
+            document.body.classList.remove('overlay-active');
+            overlay.remove();
+            btn.textContent = 'اقرأ المزيد';
+          });
+        } else {
+          const overlay = document.querySelector('.card-overlay');
+          if (overlay) overlay.remove();
+        }
+      });
+    });
+  </script>
+
+
+
+  <script src="./js/main.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

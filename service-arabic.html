@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calmora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="imgs/Calmora.png" type="image/png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Protest+Riot&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/btn-animations.css">
+  <link rel="stylesheet" href="css/service.css">
+
+
+</head>
+
+<body dir="rtl">
+  <!-- ------------------------------- navbar ------------------------------- -->
+  <nav class="navbar navbar-expand-lg bg-dark sticky-top color1">
+    <img src="imgs/Calmora.png" alt="LOGO" class="logo">
+    <span class="Calmora">
+      <h2>Calmora</h2>
+    </span>
+    <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-2">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="arabic.html">الصفحه الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Test-arabic.html">اختبر عقلك</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            الاقسام
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="service-arabic.html">الخدمات</a></li>
+            <li><a class="dropdown-item" href="arabic.html#Therapist">الاطباء</a></li>
+            <li><a class="dropdown-item" href="stories-arabic.html">القصص</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="arabic.html#contact-us">تواصل معنا</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 ms-2" type="search" placeholder="ابحث" aria-label="Search">
+        <button class="btn btn-outline-dark me-3" type="button">ابحث</button>
+        <span id="username-display" class="text-white fw-bold me-2"></span>
+        <button class="btn btn-outline-dark me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          id="show-login">سجل الان</button>
+        <button class="btn btn-outline-danger me-2 d-none" id="logout-btn">تسجيل الخروج</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- ------------------------------- Login Form ------------------------------- -->
+  <div class="login-modal" dir="ltr">
+    <div class="container-modal" id="container">
+      <button id="close">X</button>
+
+      <!-- Sign Up Form -->
+      <div class="form-container-modal sign-up">
+        <form id="signup-form">
+          <h1 class="fs-2">انشئ حساب</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>او استخدم الايميل والباسورد</span>
+          <input type="text" placeholder="الاسم" id="signup-name" required />
+          <input type="email" placeholder="الايميل" id="signup-email" required />
+          <input type="password" placeholder="الباسورد" id="signup-password" required />
+          <a href="#" id="pass">هل نسيت الباسورد؟</a>
+          <div class="text-box">
+            <button type="submit" id="signup-btn" class="btn-animation btn-animation-white btn-animation-animate">
+              إنشاء_حساب
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Sign In Form -->
+      <div class="form-container-modal sign-in">
+        <form id="signin-form">
+          <h1>تسجيل دخول</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>او استخدم الايميل والباسورد</span>
+          <input type="email" placeholder="الايميل" id="signup-email" required />
+          <input type="password" placeholder="الباسورد" id="signup-password" required />
+          <a href="#" id="pass">هل نسيت الباسورد؟</a>
+          <div class="text-box">
+            <button type="submit" id="signin-btn" class="btn-animation btn-animation-white btn-animation-animate">تسجيل_دخول</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Toggle -->
+      <div class="toggle-container-modal">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>مرحبا بعودتك!</h1>
+            <p>ادخل معلوماتك لكى تستفيد بخدمات الموقع</p>
+            <button class="hidden modal-button" id="login">تسجيل دخول</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>مرحبا</h1>
+            <p>ادخل معلوماتك لكى تستفيد بخدمات الموقع</p>
+            <button class="hidden modal-button" id="register">انشئ حساب</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="language-switcher">
+    <a href="services.html" class="language-btn">English</a>
+  </div>
+  <div class="card mb-3">
+    <div class="card-body1">
+      <h1 class="card-title position-absolute top-50 start-50 translate-middle">الخدمات والنصائح</h1>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <h1 class="ms-5 mt-5 mb-5">الصحة النفسية بين الشريكين</h1>
+    <video class="vedioo" controls id="myVideo" muted>
+      <source src="imgs/partners.mp4" type="video/mp4">
+    </video>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          ١. التواصل الفعّال
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          الاستقرار العاطفي يسمح للشركاء بالتعبير عن أفكارهم ومشاعرهم واحتياجاتهم بطريقة واضحة ومحترمة. بينما يمكن أن
+          تؤدي الصحة النفسية السيئة إلى سوء الفهم وسوء التواصل والصراعات.
+          <br>
+          عندما يكون كلا الشريكين في حالة نفسية جيدة، يكون من المرجح أن يشاركوا في محادثات منفتحة وصادقة ومتعاطفة، مما
+          يقوي روابطهم.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          ٢. الدعم العاطفي
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          العلاقة القوية تتضمن تقديم الدعم العاطفي لبعضهم البعض. الشركاء الذين يدركون صحتهم النفسية وصحة شريكهم النفسية
+          يكونون أكثر قدرة على تقديم الراحة والتشجيع والتقدير.
+          <br>
+          عندما تتأثر الصحة النفسية، قد يكون من الصعب على أحد الشريكين أو كليهما تقديم أو تقبل الدعم، مما يؤدي إلى مشاعر
+          بالعزلة أو الاستياء.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          ٣. حل النزاعات
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          تؤثر الصحة النفسية على كيفية تعامل الشركاء مع الخلافات. الأفراد الذين يتمتعون بصحة نفسية جيدة يكونون أكثر
+          ميلاً للتعامل مع الخلافات بصبر وعقلية تركز على الحل.
+          <br>
+          بالمقابل، يمكن للقلق أو الاكتئاب أو التوتر غير المُدار أن يؤدي إلى مشاعر قوية، وردود فعل متهورة، وصعوبة في حل
+          النزاعات بطريقة بنّاءة، مما قد يضر بالعلاقة.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingFour">
+        <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+          ٤. النمو والتفاهم المتبادل
+        </button>
+      </h2>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          تعزز الصحة النفسية الذكاء العاطفي، مما يساعد الشركاء على فهم والرد على احتياجات بعضهم البعض. تساهم الحالة
+          النفسية الجيدة في التعاطف والرحمة والقدرة على التعامل مع ضعف الآخر برعاية.
+          <br>
+          يمكن للشركاء أن ينموا معًا، ويطوروا الاحترام المتبادل، ويقووا ارتباطهم العاطفي عندما تكون الصحة النفسية
+          أولوية.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingFive">
+        <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+          ٥. تقليل التوتر والضغط
+        </button>
+      </h2>
+      <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+        data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          التحديات النفسية مثل القلق أو الاكتئاب أو الصدمة يمكن أن تخلق ضغطًا في العلاقات.
+          <br>
+          عندما يعمل الشركاء معًا لمعالجة احتياجاتهم النفسية، فإنهم يخففون العبء العاطفي والتوتر الذي قد تسببه هذه
+          التحديات.
+          <br>
+          طلب المساعدة معًا، سواء من خلال العلاج أو التواصل، يمكن أن يخفف من التوتر ويحسن ديناميكية العلاقة.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSix">
+          <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+            ٦. بناء الثقة والحميمية
+          </button>
+        </h2>
+        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            تزدهر الثقة والحميمية عندما يشعر كلا الشريكين بالأمان العاطفي. إذا لم تُعالَج مشكلات الصحة النفسية، فقد تؤدي
+            إلى انعدام الأمان، وانعدام الثقة، أو نقص في القرب العاطفي.
+            <br>
+            الحالة النفسية الصحية تُمكن الشخص من أن يكون أكثر انفتاحًا وتعبيرًا عن نفسه، مما يسمح بوجود حميمية عاطفية
+            وجسدية أعمق.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSeven">
+          <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+            ٧. تعزيز الرفاهية الفردية
+          </button>
+        </h2>
+        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            العلاقة القوية تتطلب دعمًا عاطفيًا متبادلًا. الشركاء الذين يدركون صحتهم النفسية وصحة شريكهم النفسية يكونون
+            أكثر قدرة على تقديم الراحة، والتشجيع، والتقدير.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingEight">
+          <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+            ٨. خلق بيئة صحية
+          </button>
+        </h2>
+        <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            العلاقة السليمة نفسيًا تخلق بيئة آمنة ومغذية لكلا الشريكين. فهي تعزز العادات الإيجابية، مثل التواصل الجيد،
+            والاستماع النشط، والقدرة على التعامل مع الضغوط بطرق صحية.
+            <br>
+            وهذه البيئة لا تعود بالنفع فقط على الشريكين، بل أيضًا على الأطفال أو أفراد الأسرة الآخرين، حيث يتم تقديم
+            نموذج صحي لممارسة الصحة النفسية.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingNine">
+          <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+            ٩. منع انهيار العلاقة
+          </button>
+        </h2>
+        <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            المشاكل النفسية غير المعالجة يمكن أن تؤدي إلى انهيار العلاقات بسبب البعد العاطفي، أو زيادة الخلافات، أو
+            إهمال احتياجات الشريك.
+            <br>
+            الاهتمام بالصحة النفسية من خلال العناية الذاتية، وطلب المساعدة المهنية، والحفاظ على التواصل المفتوح يمكن أن
+            يمنع تفاقم هذه المشاكل ويُجنب العلاقة التدهور.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTen">
+          <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+            ١٠. السعادة والرضا المشترك
+          </button>
+        </h2>
+        <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen"
+          data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            الشركاء الذين يتمتعون بصحة نفسية جيدة يكونون أكثر سعادة ورضا في علاقتهم. يمكنهم الاستمتاع بالتجارب المشتركة،
+            ودعم أهداف بعضهم البعض، والمساهمة في إسعاد الآخر.
+            <br>
+            عندما يكون الشريكان بصحة نفسية جيدة، يمكنهم مواجهة تحديات الحياة معًا، مما يؤدي إلى علاقة أكثر توازنًا
+            وإشباعًا.
+          </div>
+        </div>
+        <div class="container1">
+          <div class="text">
+            <div class="title-container">
+              <h1 id="work">أهمية الصحة النفسية في مكان العمل</h1>
+            </div>
+
+            <h2>1. تعزز إنتاجية الموظفين</h2>
+            <p>عندما يكون الموظفون بصحة نفسية جيدة، فإنهم يكونون أكثر تركيزًا ونشاطًا وتحفيزًا. تساعد الصحة النفسية
+              الجيدة الموظفين على البقاء منخرطين في مهامهم، والتفكير النقدي، والأداء بكفاءة. من ناحية أخرى، يمكن أن تؤدي
+              مشكلات الصحة النفسية مثل القلق أو الاكتئاب أو الإرهاق إلى تقليل الإنتاجية بشكل كبير، مما يؤدي إلى الأخطاء
+              والتأخير وانخفاض المخرجات. من خلال دعم الصحة النفسية، يمكن لأصحاب العمل ضمان عمل فرقهم بكامل إمكانياتهم.
+            </p>
+
+            <h2>2. تقلل من الغياب والحضور غير الفعّال</h2>
+            <p>تُعد مشاكل الصحة النفسية من الأسباب الرئيسية للغياب في مكان العمل. الموظفون الذين يعانون من تحديات نفسية
+              هم أكثر عرضة لأخذ إجازات مرضية أو إجازات طويلة. ومع ذلك، حتى عند تواجدهم في العمل، يمكن أن تؤدي مشاكل
+              الصحة النفسية إلى الحضور غير الفعّال - أي عندما يحضر الموظفون لكنهم غير قادرين على الأداء بأفضل ما لديهم.
+              من خلال معالجة مشكلات الصحة النفسية، يمكن لأصحاب العمل تقليل كل من الغياب والحضور غير الفعّال، مما يؤدي
+              إلى قوة عاملة أكثر كفاءة وإنتاجية.</p>
+
+            <h2>3. تعزز بيئة عمل إيجابية</h2>
+            <p>المنظمات التي تعطي أولوية للصحة النفسية تخلق ثقافة داعمة وشاملة يشعر فيها الموظفون بالتقدير والفهم. تؤدي
+              بيئة العمل الإيجابية إلى رضا وظيفي أعلى، وتحسين الروح المعنوية، وزيادة الاحتفاظ بالموظفين. عندما تؤخذ
+              الصحة النفسية على محمل الجد، يكون الموظفون أكثر استعدادًا لمناقشة أي تحديات يواجهونها، مما يمكن أن يؤدي
+              إلى تدخلات مبكرة ونظم دعم أفضل.</p>
+
+            <h2>4. تعزز تفاعل الموظفين وولائهم</h2>
+            <p>الموظفون الذين يشعرون بأنهم مدعومون نفسيًا يكونون أكثر تفاعلًا مع عملهم وولاءً للمنظمة. تساعد المبادرات
+              النفسية مثل برامج مساعدة الموظفين، وأيام الصحة النفسية، وترتيبات العمل المرنة في الاحتفاظ بالمواهب
+              المتميزة. الموظفون المتفاعلون أكثر ميلًا للبقاء في المنظمة، مما يقلل من معدل دوران الموظفين والتكاليف
+              المرتبطة بتوظيف وتدريب موظفين جدد.</p>
+
+            <h2>5. تحسن الإبداع والابتكار</h2>
+            <p>العقل السليم أكثر انفتاحًا على الأفكار الجديدة وحل المشكلات. عندما لا يكون الموظفون مثقلين بالإجهاد أو
+              مشكلات الصحة النفسية، يكون لديهم القدرة على التفكير بإبداع، والابتكار، والمساهمة في نمو المنظمة. يمكن أن
+              يوفر دعم الصحة النفسية بيئة مناسبة يشعر فيها الموظفون بالثقة لمشاركة أفكار جديدة وتحدي الوضع الراهن، وهو
+              أمر بالغ الأهمية لتعزيز الابتكار في عالم الأعمال التنافسي.</p>
+
+            <h2>6. تدعم التوازن بين العمل والحياة</h2>
+            <p>يساعد التركيز القوي على الصحة النفسية في العمل الموظفين على الحفاظ على توازن صحي بين العمل والحياة.
+              غالبًا ما تنشأ مشكلات الصحة النفسية عندما يكون الموظفون مرهقين، أو تحت ضغط، أو غير قادرين على إدارة
+              المسؤوليات الشخصية والمهنية بشكل فعال. من خلال تعزيز الرفاه النفسي وتقديم جداول عمل مرنة، يساعد أصحاب
+              العمل الموظفين على تحقيق التوازن، مما يقلل التوتر ويزيد من الرضا العام.</p>
+
+            <h2><b>الخلاصة</b></h2>
+            <p>الاستثمار في الصحة النفسية في مكان العمل هو فوز للطرفين، للموظفين وأصحاب العمل على حد سواء. القوى العاملة
+              التي تتمتع بصحة نفسية جيدة تكون أكثر إنتاجية، وتفاعلًا، وولاءً لأهداف المنظمة. من خلال خلق بيئة داعمة
+              وتوفير الموارد للعناية بالصحة النفسية، يمكن لأصحاب العمل تحسين ثقافة العمل العامة، وتعزيز الروح المعنوية،
+              ودفع النجاح. في النهاية، فإن المنظمات التي تعطي الأولوية للصحة النفسية لا تُحسّن فقط رفاه موظفيها، بل تزيد
+              أيضًا من ربحيتها واستدامتها على المدى الطويل.</p>
+
+          </div>
+        </div>
+
+
+        <h1 class="ms-5 mt-5 mb-5" id="disorders">الاضطرابات النفسية الشائعة</h1>
+        <video class="vedioo" controls id="myVideo" muted>
+          <source src="imgs/help.mp4" type="video/mp4">
+        </video>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingEleven">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false"
+              aria-controls="flush-collapseEleven">
+              ١. الاكتئاب
+            </button>
+          </h2>
+          <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: حالة مزمنة تتميز بالحزن الشديد وفقدان الاهتمام أو المتعة في الأنشطة اليومية، وغالبًا ما تصاحبها
+              القلق أو الشعور بالذنب.
+              <br>
+              العلاج:
+              <br>
+              العلاج السلوكي المعرفي (CBT)<br>
+              مضادات الاكتئاب مثل SSRIs أو SNRIs<br>
+              العلاج النفسي (العلاج بالكلام)<br>
+              التمارين الرياضية المنتظمة، التأمل، وتقنيات اليقظة الذهنية
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingTwelve">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false"
+              aria-controls="flush-collapseTwelve">
+              ٢. الفصام
+            </button>
+          </h2>
+          <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: اضطراب نفسي خطير يؤثر على التفكير والمشاعر والسلوك، وقد يؤدي إلى الهلوسة، الأوهام، والتفكير غير
+              المنظم.
+              <br>
+              العلاج:
+              <br>
+              مضادات الذهان<br>
+              العلاج السلوكي المعرفي (CBT)<br>
+              التدخلات النفسية والاجتماعية<br>
+              العلاج الداعم وبرامج إعادة التأهيل
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingTherteen">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseTherteen" aria-expanded="false"
+              aria-controls="flush-collapseTherteen">
+              ٣. اضطرابات القلق
+            </button>
+          </h2>
+          <div id="flush-collapseTherteen" class="accordion-collapse collapse" aria-labelledby="flush-headingTherteen"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: مجموعة من الاضطرابات النفسية تتميز بالخوف أو القلق أو التوتر المفرط، وغالبًا ما تؤدي إلى سلوك
+              تجنبي.
+              <br>
+              العلاج:
+              <br>
+              العلاج السلوكي المعرفي (CBT)<br>
+              أدوية مثل البنزوديازيبينات أو مضادات الاكتئاب<br>
+              تقنيات الاسترخاء (تمارين التنفس، اليقظة الذهنية)<br>
+              علاج التعرض في حالات الرهاب أو نوبات الهلع
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingFourteen">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseFourteen" aria-expanded="false"
+              aria-controls="flush-collapseFourteen">
+              ٤. الاضطراب ثنائي القطب
+            </button>
+          </h2>
+          <div id="flush-collapseFourteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourteen"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: اضطراب مزاجي يتميز بتقلبات مزاجية حادة، تشمل نوبات من الهوس (طاقة مرتفعة) ونوبات اكتئابية (طاقة
+              منخفضة).
+              <br>
+              العلاج:
+              <br>
+              مثبتات المزاج (مثل الليثيوم)<br>
+              مضادات الاكتئاب ومضادات الذهان<br>
+              العلاج النفسي (CBT والعلاج التفاعلي بين الأشخاص)<br>
+              إدارة نمط الحياة، بما يشمل النوم وتقنيات التحكم في التوتر
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingFiveteen">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseFiveteen" aria-expanded="false"
+              aria-controls="flush-collapseFiveteen">
+              ٥. اضطراب ما بعد الصدمة (PTSD)
+            </button>
+          </h2>
+          <div id="flush-collapseFiveteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFiveteen"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: حالة ناتجة عن التعرض لحدث صادم، تؤدي إلى ذكريات متكررة، كوابيس، وقلق شديد.
+              <br>
+              العلاج:
+              <br>
+              العلاج السلوكي المعرفي مع تقنيات التعرض<br>
+              إزالة التحسس وإعادة المعالجة بحركات العين (EMDR)<br>
+              مضادات الاكتئاب أو أدوية القلق<br>
+              العلاج الجماعي أو مجموعات الدعم
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingSixteen">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseSixteen" aria-expanded="false"
+              aria-controls="flush-collapseSixteen">
+              ٦. اضطراب الوسواس القهري (OCD)
+            </button>
+          </h2>
+          <div id="flush-collapseSixteen" class="accordion-collapse collapse" aria-labelledby="flush-headingSixteen"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: اضطراب يتميز بأفكار مزعجة ومتكررة (وساوس) وسلوكيات قهرية تهدف لتخفيف القلق.
+              <br>
+              العلاج:
+              <br>
+              العلاج السلوكي المعرفي (التعرض ومنع الاستجابة)<br>
+              SSRIs<br>
+              تدريب عكس العادة<br>
+              تقنيات الاسترخاء مثل التأمل واليقظة الذهنية
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingSeventeen">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseSeventeen" aria-expanded="false"
+              aria-controls="flush-collapseSeventeen">
+              ٧. اضطراب فرط الحركة وتشتت الانتباه (ADHD)
+            </button>
+          </h2>
+          <div id="flush-collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="flush-headingSeventeen"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: اضطراب عصبي نمائي يتميز بصعوبة في التركيز، وفرط النشاط، والسلوك الاندفاعي.
+              <br>
+              العلاج:
+              <br>
+              أدوية منبهة (مثل ريتالين، أديرال)<br>
+              العلاج السلوكي وتدريب المهارات<br>
+              تدريب على التنظيم<br>
+              تقنيات إدارة الوقت
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingEighteen">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseEighteen" aria-expanded="false"
+              aria-controls="flush-collapseEighteen">
+              ٨. اضطرابات الأكل
+            </button>
+          </h2>
+          <div id="flush-collapseEighteen" class="accordion-collapse collapse" aria-labelledby="flush-headingEighteen"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: اضطرابات مثل فقدان الشهية العصبي، الشره المرضي، واضطراب الأكل القهري، وتتميز بعادات غذائية غير
+              طبيعية تؤثر سلبًا على الصحة.
+              <br>
+              العلاج:
+              <br>
+              الإرشاد الغذائي<br>
+              العلاج السلوكي المعرفي (CBT)<br>
+              العلاج الأسري (خاصة للمراهقين)<br>
+              المتابعة الطبية والرعاية الصحية المستمرة
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingNineteen">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseNineteen" aria-expanded="false"
+              aria-controls="flush-collapseNineteen">
+              ٩. اضطراب الشخصية الحدية (BPD)
+            </button>
+          </h2>
+          <div id="flush-collapseNineteen" class="accordion-collapse collapse" aria-labelledby="flush-headingNineteen"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: اضطراب نفسي يتميز بعدم الاستقرار العاطفي، صعوبات سلوكية، وعلاقات غير مستقرة، مع خوف دائم من الهجر.
+              <br>
+              العلاج:
+              <br>
+              العلاج السلوكي الجدلي (DBT)<br>
+              العلاج السلوكي المعرفي (CBT)<br>
+              مثبتات المزاج<br>
+              العلاج الجماعي وشبكات الدعم
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingTwinty">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseTwinty" aria-expanded="false"
+              aria-controls="flush-collapseTwinty">
+              ١٠. اضطراب الرهاب الاجتماعي
+            </button>
+          </h2>
+          <div id="flush-collapseTwinty" class="accordion-collapse collapse" aria-labelledby="flush-headingTwinty"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: حالة تتميز بالخوف الشديد من المواقف الاجتماعية، مما يؤدي إلى التجنب والضغط أثناء التفاعل الاجتماعي.
+              <br>
+              العلاج:
+              <br>
+              العلاج السلوكي المعرفي (CBT)<br>
+              علاج التعرض لتقليل الخوف<br>
+              أدوية القلق أو مضادات الاكتئاب<br>
+              تدريب المهارات الاجتماعية وتقنيات الاسترخاء
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingTwentyOne">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyOne" aria-expanded="false"
+              aria-controls="flush-collapseTwentyOne">
+              ١١. مشاكل الثقة
+            </button>
+          </h2>
+          <div id="flush-collapseTwentyOne" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: صعوبة في الوثوق بالآخرين نتيجة تجارب سابقة أو صدمات، مما يؤدي إلى صعوبة في بناء العلاقات.
+              <br>
+              العلاج:
+              <br>
+              العلاج السلوكي المعرفي (CBT)<br>
+              تمارين بناء الثقة وتدريب مهارات التواصل<br>
+              العلاج الفردي أو الجماعي<br>
+              كتابة اليوميات والتأمل في التجارب السابقة
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item ">
+          <h2 class="accordion-header" id="flush-headingTwentyTwo">
+            <button class="accordion-button collapsed fs-5 fw-bold" style="color:#1a2e1f;" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseTwentyTwo" aria-expanded="false"
+              aria-controls="flush-collapseTwentyTwo">
+              ١٢. الصدمة النفسية
+            </button>
+          </h2>
+          <div id="flush-collapseTwentyTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwentyTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              الوصف: إصابة نفسية نتيجة التعرض لحادث مؤلم أو صادم، يمكن أن تترك آثاراً نفسية وعاطفية طويلة الأمد.
+              <br>
+              العلاج:
+              <br>
+              العلاج السلوكي المعرفي الموجه للصدمات<br>
+              معالجة إزالة التحسس وإعادة المعالجة بحركات العين (EMDR)<br>
+              مجموعات الدعم والإرشاد بين الأقران<br>
+              تقنيات التأمل والتركيز الذهني والاسترخاء
+            </div>
+          </div>
+        </div>
+
+        <div class="container2">
+          <div class="text">
+            <div class="title-container">
+              <h1 id="family" style="color: white;">الصحة النفسية داخل الأسرة: مفتاح العلاقات الصحية</h1>
+              <img src="./imgs/family.jpg" alt="im">
+            </div>
+
+            <h2>1. دور الأسرة في الصحة النفسية</h2>
+            <p>تُعد الأسرة نظام الدعم الأساسي لأفرادها. حيث يضع الآباء ومقدمو الرعاية الأساس للصحة النفسية من خلال تقديم
+              نماذج لاستراتيجيات التأقلم الإيجابية، والتواصل، وتنظيم المشاعر. غالبًا ما ينظر الأطفال إلى والديهم كنماذج
+              يحتذى بها ويتعلمون كيفية التعامل مع التوتر والقلق والمشاعر الأخرى من خلال ردود أفعال والديهم تجاه المواقف.
+              عندما تخلق الأسرة بيئة منفتحة وداعمة، فإنها تساعد على تقليل وصمة العار المرتبطة بمشاكل الصحة النفسية وتشجع
+              أفرادها على طلب المساعدة عند الحاجة.</p>
+
+            <h2>2. التواصل: المفتاح لمعالجة مشكلات الصحة النفسية</h2>
+            <p>يُعد التواصل المفتوح والصادق أمرًا ضروريًا للحفاظ على صحة نفسية جيدة داخل الأسرة. عندما يتم تشجيع أفراد
+              الأسرة على التعبير عن مشاعرهم ومشاركة التحديات، فإنهم يكونون أكثر عرضة للشعور بأنهم مسموعون ومدعومون. من
+              خلال تعزيز بيئة آمنة للنقاش حول الصحة النفسية، يمكن للأسرة منع تفاقم المشكلات وتقديم الدعم عند الحاجة. أما
+              غياب التواصل أو تجنب المواضيع الصعبة فقد يؤدي إلى العزلة العاطفية وتفاقم المشكلات النفسية.</p>
+
+            <h2>3. تأثير الصحة النفسية للوالدين على الأطفال</h2>
+            <p>تؤثر الصحة النفسية للوالدين بشكل كبير على الصحة النفسية للأطفال. الآباء الذين يعانون من تحديات نفسية مثل
+              الاكتئاب، أو القلق، أو الإدمان قد يخلقون بيئة مرهقة تؤثر على التطور العاطفي لأطفالهم دون قصد. الأطفال
+              الذين ينشأون في أسر تعاني من مشكلات نفسية غير معالجة قد يواجهون مشاكل خاصة بهم مثل تدني احترام الذات، أو
+              القلق، أو صعوبة في بناء علاقات صحية في المستقبل. من الضروري أن يعالج الآباء مشكلاتهم النفسية ويطلبوا
+              المساعدة عند الحاجة لضمان توفير بيئة مستقرة وحنونة لأطفالهم.</p>
+
+            <h2>4. خلق بيئة أسرية داعمة</h2>
+            <p>لرعاية صحة نفسية جيدة، من المهم أن تخلق الأسرة بيئة آمنة وداعمة. يمكن أن يشمل ذلك قضاء وقت ممتع معًا،
+              وممارسة التواصل الإيجابي، والانخراط في أنشطة تعزز الاسترخاء والتواصل مثل النزهات العائلية، أو ممارسة
+              الرياضة، أو الهوايات. توفر الأسر الداعمة الراحة العاطفية، وتقلل التوتر، وتمنح الإحساس بالانتماء، وكلها
+              عوامل تسهم في تعزيز الصحة النفسية لكل فرد.</p>
+
+            <h2>5. التعرف على علامات المعاناة النفسية</h2>
+            <p>من المهم أن يتمكن أفراد الأسرة من التعرف على علامات المعاناة النفسية لدى بعضهم البعض. التغيرات في السلوك،
+              تقلبات المزاج، الانسحاب من الأنشطة الاجتماعية، وصعوبة التركيز يمكن أن تكون مؤشرات على وجود مشاكل نفسية.
+              يساعد الاكتشاف المبكر والتدخل السريع في منع تطور المشاكل وتمكين العلاج المناسب والدعم. عندما يكون أفراد
+              الأسرة على دراية بالحالة العاطفية لبعضهم، يمكنهم تقديم المساعدة الملائمة، سواء من خلال العلاج المهني أو
+              الدعم العاطفي أو الطمأنة.</p>
+
+            <h2>6. تأثير الديناميكيات الأسرية على الصحة النفسية</h2>
+            <p>تلعب الديناميكيات الأسرية دورًا كبيرًا في تشكيل الصحة النفسية للفرد. يمكن أن تكون الأسرة الداعمة
+              والمتماسكة بمثابة حاجز ضد التوتر والمشاكل النفسية. في المقابل، قد تزيد العلاقات الأسرية المتوترة أو
+              المختلة مثل النزاعات المستمرة، أو قلة الدعم، أو الإهمال العاطفي من خطر الإصابة بالمشاكل النفسية. الأسر
+              التي تعزز الاحترام المتبادل، والفهم، والتعاون هي الأكثر قدرة على توفير نتائج نفسية أفضل لجميع أفرادها.</p>
+
+            <h2>7. أهمية طلب المساعدة المهنية</h2>
+            <p>في بعض الحالات، قد تتطلب مشكلات الصحة النفسية تدخلاً مهنيًا. لا ينبغي أن تتردد الأسر في طلب العلاج أو
+              الاستشارة النفسية عند التعامل مع مشكلات كبيرة، سواء كانت تخص طفلاً، أو والدًا، أو أحد أفراد الأسرة
+              الآخرين. يمكن للمعالجين النفسيين والمستشارين تقديم الإرشاد حول كيفية التعامل مع تحديات الصحة النفسية
+              وتحسين العلاقات الأسرية. كما أنهم يساعدون في اكتشاف المشكلات الكامنة التي قد لا تكون واضحة مثل الصدمات أو
+              التجارب السابقة أو النزاعات غير المحلولة.</p>
+
+            <h2><b>الخلاصة</b></h2>
+            <p>الصحة النفسية داخل الأسرة أمر حيوي لبناء أساس قوي وداعم لكل فرد. عندما يتم إعطاء الصحة النفسية الأولوية،
+              يشعر أفراد الأسرة بترابط أكبر، وتفهّم، وقدرة على التعامل مع تحديات الحياة. من خلال تعزيز التواصل، وتوفير
+              الدعم العاطفي، والتعرف المبكر على علامات المعاناة النفسية، يمكن أن تبني الأسرة بيئة مرنة وصحية نفسيًا.
+              الصحة النفسية ليست مسألة فردية فقط — بل هي شأن أسري. العناية بالصحة النفسية داخل الأسرة تعزز العلاقات
+              وتضمن أن يمتلك كل فرد الموارد التي يحتاجها للازدهار.</p>
+
+          </div>
+        </div>
+
+        <h1 class="ms-5 mt-5 mb-5">التمارين والنشاط البدني</h1>
+        <video class="vedioo" controls id="myVideo" muted>
+          <source src="imgs/sport.mp4" type="video/mp4">
+        </video>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading23">
+            <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse23" aria-expanded="false" aria-controls="flush-collapse23">
+              ١. تقليل أعراض القلق والاكتئاب
+            </button>
+          </h2>
+          <div id="flush-collapse23" class="accordion-collapse collapse" aria-labelledby="flush-heading23"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              النشاط البدني المنتظم يعزز من إنتاج الإندورفينات، وهي المواد الكيميائية الطبيعية التي تحسن المزاج.
+              <br>
+              يساعد التمرين في تقليل أعراض القلق والاكتئاب عن طريق تعزيز الاسترخاء، وتقليل هرمونات التوتر، وتحسين الصحة
+              العاطفية العامة.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading24">
+            <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse24" aria-expanded="false" aria-controls="flush-collapse24">
+              ٢. يعزز المزاج ومستويات الطاقة
+            </button>
+          </h2>
+          <div id="flush-collapse24" class="accordion-collapse collapse" aria-labelledby="flush-heading24"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              التمارين الرياضية تزيد من إنتاج النواقل العصبية مثل السيروتونين والدوبامين، مما يحسن المزاج ويساعد على
+              الشعور بإيجابية أكبر.
+              <br>
+              كما أنها تعزز مستويات الطاقة، مما يساعد الأفراد على الشعور بمزيد من النشاط وأقل تعبًا طوال اليوم.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading25">
+            <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse25" aria-expanded="false" aria-controls="flush-collapse25">
+              ٣. يحسن جودة النوم
+            </button>
+          </h2>
+          <div id="flush-collapse25" class="accordion-collapse collapse" aria-labelledby="flush-heading25"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              يمكن أن يساعد التمرين المنتظم في تنظيم نمط النوم، مما يسهل النوم والبقاء نائمًا.
+              <br>
+              النوم الجيد أمر أساسي للمرونة العاطفية وتقليل التوتر والقلق.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading26">
+            <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse26" aria-expanded="false" aria-controls="flush-collapse26">
+              ٤. يزيد من تقدير الذات والثقة بالنفس
+            </button>
+          </h2>
+          <div id="flush-collapse26" class="accordion-collapse collapse" aria-labelledby="flush-heading26"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              تساهم الإنجازات في اللياقة البدنية، مثل تحقيق أهداف التمرين أو تحسين القوة والتحمل، في زيادة تقدير الذات
+              والثقة بالنفس.
+              <br>
+              الشعور بالقوة الجسدية والصحة يمكن أن يؤثر بشكل إيجابي على نظرة الشخص النفسية وصورته الذاتية.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading27">
+            <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse27" aria-expanded="false" aria-controls="flush-collapse27">
+              ٥. يقلل من التوتر
+            </button>
+          </h2>
+          <div id="flush-collapse27" class="accordion-collapse collapse" aria-labelledby="flush-heading27"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              يساعد التمرين في تقليل مستوى الكورتيزول (هرمون التوتر) في الجسم، مما يؤدي إلى إدارة التوتر بشكل أفضل.
+              <br>
+              كما يوفر النشاط البدني منفذًا صحيًا للتعبير عن المشاعر السلبية وتخفيف التوتر.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading28">
+            <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse28" aria-expanded="false" aria-controls="flush-collapse28">
+              ٦. يحسن الوظائف الإدراكية
+            </button>
+          </h2>
+          <div id="flush-collapse28" class="accordion-collapse collapse" aria-labelledby="flush-heading28"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              يعمل التمرين على زيادة تدفق الدم إلى الدماغ، مما يحسن الوظائف الإدراكية والتركيز والذاكرة ومهارات حل
+              المشكلات.
+              <br>
+              البقاء نشطًا يقلل أيضًا من خطر التدهور الإدراكي مع تقدم العمر.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading29">
+            <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse29" aria-expanded="false" aria-controls="flush-collapse29">
+              ٧. يشجع على التفاعل الاجتماعي
+            </button>
+          </h2>
+          <div id="flush-collapse29" class="accordion-collapse collapse" aria-labelledby="flush-heading29"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              المشاركة في التمارين الجماعية أو الرياضات الجماعية أو دروس الصالة الرياضية يمكن أن تعزز التفاعل الاجتماعي،
+              مما يوفر الدعم ويقلل من الشعور بالوحدة ويعزز شعور المجتمع.
+              <br>
+              الاتصال الاجتماعي أمر أساسي للصحة النفسية، ويمكن أن تساعد التمارين الجماعية في تحسين هذا الجانب من الحياة.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-heading30">
+            <button class="accordion-button collapsed fs-5 fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapse30" aria-expanded="false" aria-controls="flush-collapse30">
+              ٨. يعمل كمضاد طبيعي للاكتئاب
+            </button>
+          </h2>
+          <div id="flush-collapse30" class="accordion-collapse collapse" aria-labelledby="flush-heading30"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              تشير الدراسات إلى أن التمرين يمكن أن يكون له تأثيرات مشابهة للأدوية المضادة للاكتئاب في بعض الحالات من
+              خلال المساعدة في تنظيم المزاج والعواطف بشكل طبيعي.
+            </div>
+          </div>
+        </div>
+
+        <div class="container1">
+          <div class="text">
+            <div class="title-container">
+              <h1 id="advice">نصائح لحياة سعيدة وأهمية الصحة النفسية</h1>
+            </div>
+
+            <h2>1. مارس العناية الذاتية بانتظام</h2>
+            <p>تخصيص وقت لنفسك أمر ضروري للحفاظ على الصحة الجسدية والنفسية. شارك في أنشطة تساعدك على الاسترخاء وتجديد
+              الطاقة، مثل القراءة، المشي، ممارسة اليوغا، أو ممارسة هواياتك المفضلة. من خلال الاهتمام المنتظم بنفسك،
+              يمكنك تقليل التوتر، وتحسين المزاج، وتعزيز شعورك بالراحة العامة.</p>
+
+            <h2>2. ابنِ علاقات قوية</h2>
+            <p>العلاقات القوية والداعمة تُعد مفتاح السعادة والصحة النفسية. أحط نفسك بأشخاص يرفعون من معنوياتك ويجعلونك
+              تشعر بالقيمة. قضاء الوقت مع الأحبة، الأصدقاء، والعائلة يوفر الدعم العاطفي، ويقلل الشعور بالوحدة، ويعزز
+              إحساسك بالترابط مع من حولك. وجود شبكة اجتماعية قوية يساعدك على مواجهة التوتر والتحديات.</p>
+
+            <h2>3. مارس الرياضة بانتظام</h2>
+            <p>النشاط البدني مفيد ليس فقط للجسم، بل أيضًا للعقل. تساعد التمارين الرياضية على إفراز الإندورفين، وهي
+              هرمونات السعادة التي تحسن المزاج وتقلل من أعراض القلق والاكتئاب. حتى المشي اليومي أو بضع دقائق من التمدد
+              يمكن أن يكون لها تأثير إيجابي على صحتك النفسية.</p>
+
+            <h2>4. حافظ على توازن صحي بين العمل والحياة</h2>
+            <p>الحياة المتوازنة ضرورية للسعادة والصحة النفسية. تجنب الإفراط في العمل وخصص وقتًا للأنشطة التي تجلب لك
+              السعادة والاسترخاء. يساعد وضع حدود بين العمل والحياة الشخصية في منع الإرهاق ويمنحك فرصة لإعادة شحن طاقتك.
+              كن واعيًا لوقتك وضع الأولوية لما هو مهم بالنسبة لك.</p>
+
+            <h2>5. مارس التأمل واليقظة الذهنية</h2>
+            <p>يمكن أن تساعدك اليقظة الذهنية والتأمل على البقاء حاضراً وتقليل القلق بشأن المستقبل أو الندم على الماضي.
+              أخذ بضع دقائق يوميًا للتركيز على التنفس أو ممارسة الامتنان يمكن أن يعزز مرونتك العاطفية وصفاء ذهنك. التأمل
+              المنتظم يساعد على إدارة التوتر وتحسين الصحة النفسية العامة.</p>
+
+            <h2>6. اطلب المساعدة عند الحاجة</h2>
+            <p>من الضروري أن تدرك متى تحتاج إلى المساعدة وأن تطلب الدعم. إذا كنت تعاني من التوتر أو القلق أو الاكتئاب أو
+              أي مشكلة نفسية أخرى، لا تتردد في طلب المساعدة المهنية. يمكن للعلاج النفسي أو الجلسات الإرشادية أو مجموعات
+              الدعم أن تقدم لك التوجيه والاستراتيجيات للتعامل مع تحديات الحياة. تذكر أن طلب المساعدة ليس عيبًا—بل هو
+              دليل على القوة والوعي.</p>
+
+            <h2>7. ركز على التفكير الإيجابي</h2>
+            <p>يمكن أن يؤثر التفكير الإيجابي بشكل كبير على سعادتك وصحتك النفسية. حاول التركيز على الجوانب الجيدة في
+              حياتك ومارس الامتنان. عندما تواجه تحديات، حاول أن تراها كفرص للنمو. يساعدك التركيز على الأفكار الإيجابية
+              في تقليل أنماط التفكير السلبية التي قد تؤدي إلى القلق والاكتئاب.</p>
+
+            <h2>8. احصل على قسط كافٍ من النوم</h2>
+            <p>النوم ضروري للصحة الجسدية والنفسية على حد سواء. قلة النوم يمكن أن تؤدي إلى التهيج، وصعوبة التركيز، وزيادة
+              التوتر. تأكد من الحصول على قسط كافٍ من الراحة كل ليلة، حيث يساعد النوم الجيد في تحسين المزاج، والوظائف
+              الذهنية، والصحة العاطفية.</p>
+
+            <h2>9. تناول نظامًا غذائيًا متوازنًا</h2>
+            <p>ما تأكله يؤثر على شعورك. النظام الغذائي المتوازن الغني بالفواكه، والخضروات، والحبوب الكاملة، والبروتينات
+              الخفيفة يدعم الصحة النفسية. تجنب الإفراط في تناول الكافيين، والسكريات، والأطعمة المصنعة، لأنها قد تؤثر على
+              مستويات الطاقة والمزاج. التغذية السليمة تساعد في الحفاظ على صفاء الذهن والاستقرار العاطفي.</p>
+          </div>
+        </div>
+
+        <!-- ------------------------------- contact-us------------------------------- -->
+
+        <div class="cu-item" id="contact-us">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">رقم الهاتف:</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="+20123456789">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">تفاصيل:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: none;"></textarea>
+          </div>
+          <button type="button" class="btn btn-outline-dark" id="alert" data-bs-container="body"
+            data-bs-toggle="popover" data-bs-placement="right" data-bs-content="تم الإرسال" data-bs-trigger="focus">
+            إرسال
+          </button>
+        </div>
+
+        <!-- ------------------------------- FOOTER------------------------------- -->
+        <footer class="footer" id="pageFooter">
+          <div class="footer-top">
+            <div class="logos">
+              <img src="imgs/Calmora.png" alt="الشعار" class="logo3">
+            </div>
+            <div class="contact-info">
+              <p id="Hint">الصحة النفسية لا تقل أهمية عن الصحة الجسدية.<br> خصص وقتًا لنفسك، تحدّث، استعن بمختص عند
+                الحاجة، وكن لطيفًا مع ذاتك.</p>
+              <p id="Hint">"نحن هنا من أجلك، متواجدون على مدار 24 ساعة"</p>
+              <p></p>
+            </div>
+            <div class="social-icons">
+              <a href="#" target="_blank" aria-label="فيسبوك">
+                <img src="imgs/facebook.png" alt="فيسبوك" class="icons">
+              </a>
+              <a href="#" target="_blank" aria-label="يوتيوب">
+                <img src="imgs/youtube.png" alt="يوتيوب" class="icons">
+              </a>
+              <a href="#" target="_blank" aria-label="لينكدإن">
+                <img src="imgs/linkedin.png" alt="لينكدإن" class="icons">
+              </a>
+              <a href="#" target="_blank" aria-label="واتساب">
+                <img src="imgs/whatsapp.png" alt="واتساب" class="icons">
+              </a>
+              <p><button id="contact"><a href="#contact-us">تواصل معنا</a></button> </p>
+            </div>
+          </div>
+
+          <ol class="footer-links">
+            <li><a href="arabic.html">الرئيسية</a></li>
+            <li><a href="service-arabic.html">الخدمات</a></li>
+            <li><a href="arabic.html#Therapist">الأخصائيون</a></li>
+            <li><a href="Test-arabic.html">الاختبار</a></li>
+            <li><a href="stories-arabic.html"> القصص</a></li>
+          </ol>
+
+          <div class="footer-bottom">
+            <hr>
+            <p class="bottom">حقوق النشر © 2025 الأمانة العامة للصحة النفسية وعلاج الإدمان</p>
+            <p class="bottom">تم التطوير بواسطة <span>DMS</span> - الإصدار 2025</p>
+          </div>
+          <button class="scroll-top-btn" id="scrollTopBtn" title="Back to Top">⇮</button>
+
+        </footer>
+
+        <script src="./js/main.js"></script>
+        <script src="./js/login.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+          integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+          crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+          integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>

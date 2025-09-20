@@ -1,0 +1,941 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* --------------- General -------------------------- */
+/* زرار تغيير اللغه */
+.language-switcher {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.language-btn {
+  background: linear-gradient(to top, #d7f0f8, #587a62);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-style: italic;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: background-color 0.4s ease, transform 0.4s ease;
+  animation: slideDown 1s ease-out forwards;
+}
+
+.language-btn:hover {
+  scale: 1.1;
+}
+
+@media (max-width: 768px) {
+   .language-switcher {
+    top: 80px; 
+    right: 12px;
+  }
+
+  .language-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+   .language-switcher {
+    top: 80px; 
+    right: 12px;
+  }
+
+  .language-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* --------------- navbar -------------------------- */
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-size: cover;
+  margin-left: 10px;
+}
+
+.Calmora h2 {
+  font-family: serif;
+  font-size: 30px;
+  opacity: 70%;
+  padding: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.color1 {
+  background: linear-gradient(to bottom, #89a090, #587a62) !important;
+
+}
+
+.t-color1 {
+  color: rgb(255, 255, 255) !important;
+}
+
+.nav-link:hover {
+  scale: 1.1;
+}
+
+.dropdown-menu li a:hover {
+  scale: .9;
+}
+
+.btn {
+  --bs-btn-hover-bg: #aac4b0;
+  --bs-btn-hover-color: rgb(3, 0, 0);
+  --bs-btn-active-bg: #aac4b0;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  width: fit-content;
+}
+
+#pass {
+  color: #000000;
+}
+
+#pass:hover {
+  scale: .9;
+}
+@media (max-width: 768px) {
+  .logo {
+    width: 60px;
+    height: auto;
+  }
+
+  .Calmora h2 {
+    font-size: 20px;
+    margin: 0 5px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .navbar-toggler {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .form-control {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  #username-display {
+    font-size: 12px;
+  }
+}
+
+
+/* --------------- Login Form -------------------------- */
+.form-m {
+  margin: 10px;
+}
+
+.form-m p {
+  font-size: 14px;
+}
+
+/* الاسم الى بيظهر لما اسجل ف ال login */
+#username-display {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: serif;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#username-display:hover {
+  transform: scale(.9);
+}
+
+#show-login {
+  color: #000000;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------- Landing -------------------------- */
+.landing {
+  background-image: url(../imgs/Clip.mp4);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+
+header {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+  padding: 20px;
+  z-index: 1;
+
+}
+
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  clip-path: ellipse(100% 90% at 50% 5%);
+}
+
+.header-content {
+  z-index: 10;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.header-content h1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: serif;
+
+}
+
+.header-content p {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: serif;
+}
+
+.container {
+  padding: 130px;
+}
+
+.landing-content {
+  background-color: rgba(226, 224, 223, 0.705);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.landing-content button a {
+  text-decoration: none;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 32px; 
+    margin-bottom: 15px;
+  }
+
+  .header-content p {
+    font-size: 16px; 
+    margin-bottom: 15px;
+  }
+
+  .container {
+    padding: 80px; 
+  }
+
+  .landing-content {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .landing-content button a {
+    font-size: 14px; 
+  }
+}
+
+
+/* --------------- Caro -------------------------- */
+
+.caro-content {
+  text-align: center;
+}
+
+.caro-content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: serif;
+}
+/* السلايدز الى بتتحرك للجمب */
+
+.carousel-caption {
+  border-radius: 20px;
+  padding: 20px;
+  color: #000000;
+  max-width: 60%;
+  margin: auto;
+  background-color: #ffffff;
+  opacity: 80%;
+}
+
+.vh {
+  height: 100vh;
+  max-width: 100%;
+  margin-top: 30px;
+}
+.carousel-caption h5 {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.carousel-caption p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: serif;
+}
+
+/* الزر */
+.carousel-caption button.btn {
+  margin-top: 15px;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+#open a {
+  color: #000000;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .carousel-caption {
+    padding: 8px;
+    font-size: 12px;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 14px;
+  }
+
+  .carousel-caption p {
+    font-size: 12px;
+  }
+  .vh {
+   width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  }
+
+  .carousel-caption button.btn {
+    font-size: 12px;
+    padding: 5px 11px;
+  }
+
+  #open a {
+    font-size: 14px;
+  }
+}
+/* --------------- Contact us -------------------------- */
+
+.cu-item {
+  margin: 40px;
+}
+
+/* --------------- Backgrounds -------------------------- */
+.background1 {
+  width: 100%;
+  height: 350px;
+  background-image: url(../imgs/banner3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background2 {
+  width: 100%;
+  height: 350px;
+  background-image: url(../imgs/banner1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* --------------- Therapist -------------------------- */
+.section {
+      position: relative;
+      height: 70px;
+    }
+
+    .section h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: -webkit-linear-gradient(top, rgb(0, 0, 0), #8b8888, black);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .line-shape {
+      height: 8px;
+      width: 150px;
+      background-color: #aac4b0;
+      border-radius: 7px;
+      margin-bottom: 10px;
+    }
+
+    .therapist-img1 {
+      clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+      height: 100%;
+    }
+
+    .therapist-img2 {
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+      height: 100%;
+    }
+
+    .card:hover {
+      scale: 0.96;
+    }
+
+    .card h5, h1 {
+      font-family: serif;
+    }
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+
+  .card .col-md-8,
+  .card .col-md-4,
+  .card .col-xs-12 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+.therapist-img1,
+.therapist-img2 {
+  clip-path: none;
+  border-radius: 8px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+  .card .col-md-8 {
+    padding: 0.8rem;
+  }
+ .card-body h2{
+  font-size: 12px;
+ }
+.card-text {
+    font-size: 14px !important; 
+  }
+
+.card-text.fs-5 {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+  .card-body {
+  padding: 1rem;
+  text-align: left;
+  font-size: 14px;
+}
+  .btn {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  margin: 5px 0;
+  width: 100%;
+}
+.line-shape {
+    width: 80px;
+    height: 5px;
+    margin: 8px auto;
+  }
+
+}
+/* جزء خاص بالدفع */
+.payment-modal {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+
+}
+
+.payment-content {
+  background: white;
+  margin: 70px 10px 10px;
+  border-radius: 70px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+
+
+}
+
+.payment-options img {
+  width: 60px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.payment-options img:hover {
+  transform: scale(1.1);
+}
+
+.hiddenn {
+  display: none;
+}
+
+.close {
+  position: relative;
+  font-size: 24px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+#payment-form input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+#payment-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* --------------- Media Query -------------------------- */
+.o1 {
+  order: 1;
+}
+
+.photo {
+  height: 90px;
+}
+
+@media (max-width: 767px) {
+  .o1 {
+    order: 0;
+  }
+
+  .n-img1 {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .n-img2 {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+}
+
+
+.vedioo {
+  display: block;
+  margin: 20px auto;
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* --------------- contact-us -------------------------- */
+
+@media (max-width: 768px) {
+  #contact-us .card-body2 {
+    height: 60px !important;
+  }
+
+  #contact-us .card-title {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .cu-item {
+    padding: 12px;
+  }
+
+  .cu-item label {
+    font-size: 13px;
+  }
+
+  .cu-item input,
+  .cu-item textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .cu-item button {
+    font-size: 13px;
+    padding: 8px 18px;
+    margin-top: 10px;
+  }
+ .social-icons {
+    display:block;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 15px;
+  }
+
+  .social-icons .icons {
+    width: 28px; 
+    height: auto;
+  }
+  
+  #contact button {
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  #contact  a {
+    text-decoration: none;
+    border: none;
+    font-size: 15px;
+  }
+
+}
+
+
+/* --------------- Footer -------------------------- */
+.footer {
+  background-image: url("../imgs/footerr.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 20px;
+  color: white;
+  text-align: right;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.logo3 {
+  width: 140px;
+  height: 140px;
+  border-radius: 100px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: 0.6s ease-in-out;
+  margin: 20px;
+}
+
+.icons-holder {
+  position: fixed;
+  top: 35%;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.logo3:hover {
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.7),
+    0 0 40px 10px rgba(77, 68, 56, 0.5),
+    0 0 60px 15px rgba(255, 255, 255, 0.4);
+  transform: scale(1.05) rotate(1deg);
+}
+
+#contact {
+  border-radius: 60px;
+}
+
+#contact a:hover {
+  background-color: white;
+}
+
+#contact a {
+  width: 150px;
+  border-radius: 60px;
+  padding: 0px;
+  color: #000000;
+
+}
+
+.contact-info {
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  font-family: serif;
+}
+
+.social-icons {
+  padding: 10px;
+  text-align: center;
+
+}
+
+.social-icons a {
+  padding: 15px;
+  text-decoration: none;
+
+
+}
+
+.icons {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.icons:hover {
+  scale: 1.1;
+
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  list-style: none;
+}
+
+.footer-links li {
+  position: relative;
+  padding: 0 10px;
+}
+
+.footer-links li:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+  color: #ffffff;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  color: #555e57;
+}
+
+.footer-bottom {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.bottom {
+  text-align: center;
+  font-size: 22px;
+
+}
+
+.footer-bottom button a {
+  text-decoration: none;
+  font-size: 30px;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo3 {
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+  }
+
+  .icons {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-icons a {
+    padding: 8px;
+  }
+
+  .contact-info {
+    font-size: 16px;
+  }
+
+  .footer-links {
+    gap: 8px; /* بدل 15px */
+    padding: 5px;
+  }
+
+  .footer-links a {
+    font-size: 14px; /* حجم أصغر للرابط */
+  }
+
+  .footer-links li:not(:last-child)::after {
+    right: -6px;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .bottom {
+    font-size: 16px;
+  }
+
+  .footer-bottom button a {
+    font-size: 20px;
+  }
+
+  .icons-holder {
+    top: 30%;
+    right: 5px;
+    gap: 10px;
+  }
+
+
+  .background1,
+  .background2 {
+    background-attachment: scroll;
+    min-height: 250px;
+  }
+
+  .vh {
+    height: 75vh;
+  }
+
+  .card-body {
+    text-align: center;
+  }
+
+  .nav-link:hover {
+    scale: .95;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .vh {
+    height: 75vh;
+  }
+
+  .nav-link:hover {
+    scale: .95;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 15px;
+  }
+
+  .sign-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+  
+  .nav-link:hover {
+    scale: .95;
+  }
+}
+
+/* ----------scroll--------------*/
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid #587a62;
+  color: #4c6955;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 99999;
+  display: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(1px);
+}
+
+.scroll-top-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(50%) scale(.9);
+}
